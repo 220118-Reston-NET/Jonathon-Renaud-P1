@@ -14,8 +14,8 @@ public class ICustomerBL
     /// Initial addition of customer will add some other functionality
     /// 
     /// </summary>
-    /// <param name="c_customer"></param>
+    /// <param name="p_customer"></param>
     /// <returns></returns>
-    // Customer AddCustomer(Customer c_customer);
+    // Customer AddCustomer(Customer p_customer);
 }
 }
