@@ -2,6 +2,9 @@ namespace ProjUI
 {
     public class AddCustomerMenu : IMenu
     {
+        
+        // stuff in code needs here
+
         public void Display()
         {
             throw new NotImplementedException();
