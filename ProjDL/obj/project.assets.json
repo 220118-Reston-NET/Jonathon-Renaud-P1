@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "ProjModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/ProjModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProjModel.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "ProjModel/1.0.0": {
+      "type": "project",
+      "path": "../ProjModel/ProjModel.csproj",
+      "msbuildProject": "../ProjModel/ProjModel.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "ProjModel >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\seang\\.nuget\\packages\\": {}
@@ -13,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\seang\\OneDrive\\Desktop\\Revature\\Revature\\Project0\\ProjDL\\ProjDL.csproj",
+      "projectUniqueName": "C:\\Users\\seang\\OneDrive\\Desktop\\Revature\\Project0\\ProjDL\\ProjDL.csproj",
       "projectName": "ProjDL",
-      "projectPath": "C:\\Users\\seang\\OneDrive\\Desktop\\Revature\\Revature\\Project0\\ProjDL\\ProjDL.csproj",
+      "projectPath": "C:\\Users\\seang\\OneDrive\\Desktop\\Revature\\Project0\\ProjDL\\ProjDL.csproj",
       "packagesPath": "C:\\Users\\seang\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\seang\\OneDrive\\Desktop\\Revature\\Revature\\Project0\\ProjDL\\obj\\",
+      "outputPath": "C:\\Users\\seang\\OneDrive\\Desktop\\Revature\\Project0\\ProjDL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\seang\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -31,7 +50,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\seang\\OneDrive\\Desktop\\Revature\\Project0\\ProjModel\\ProjModel.csproj": {
+              "projectPath": "C:\\Users\\seang\\OneDrive\\Desktop\\Revature\\Project0\\ProjModel\\ProjModel.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

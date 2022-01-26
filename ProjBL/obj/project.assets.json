@@ -1,11 +1,49 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "ProjDL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "ProjModel": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ProjDL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProjDL.dll": {}
+        }
+      },
+      "ProjModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/ProjModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProjModel.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "ProjDL/1.0.0": {
+      "type": "project",
+      "path": "../ProjDL/ProjDL.csproj",
+      "msbuildProject": "../ProjDL/ProjDL.csproj"
+    },
+    "ProjModel/1.0.0": {
+      "type": "project",
+      "path": "../ProjModel/ProjModel.csproj",
+      "msbuildProject": "../ProjModel/ProjModel.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "ProjDL >= 1.0.0",
+      "ProjModel >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\seang\\.nuget\\packages\\": {}
@@ -13,11 +51,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\seang\\OneDrive\\Desktop\\Revature\\Revature\\Project0\\ProjBL\\ProjBL.csproj",
+      "projectUniqueName": "C:\\Users\\seang\\OneDrive\\Desktop\\Revature\\Project0\\ProjBL\\ProjBL.csproj",
       "projectName": "ProjBL",
-      "projectPath": "C:\\Users\\seang\\OneDrive\\Desktop\\Revature\\Revature\\Project0\\ProjBL\\ProjBL.csproj",
+      "projectPath": "C:\\Users\\seang\\OneDrive\\Desktop\\Revature\\Project0\\ProjBL\\ProjBL.csproj",
       "packagesPath": "C:\\Users\\seang\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\seang\\OneDrive\\Desktop\\Revature\\Revature\\Project0\\ProjBL\\obj\\",
+      "outputPath": "C:\\Users\\seang\\OneDrive\\Desktop\\Revature\\Project0\\ProjBL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\seang\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -31,7 +69,14 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\seang\\OneDrive\\Desktop\\Revature\\Project0\\ProjDL\\ProjDL.csproj": {
+              "projectPath": "C:\\Users\\seang\\OneDrive\\Desktop\\Revature\\Project0\\ProjDL\\ProjDL.csproj"
+            },
+            "C:\\Users\\seang\\OneDrive\\Desktop\\Revature\\Project0\\ProjModel\\ProjModel.csproj": {
+              "projectPath": "C:\\Users\\seang\\OneDrive\\Desktop\\Revature\\Project0\\ProjModel\\ProjModel.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

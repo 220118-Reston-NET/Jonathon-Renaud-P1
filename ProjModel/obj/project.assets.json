@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\seang\\OneDrive\\Desktop\\Revature\\Revature\\Project0\\ProjModel\\ProjModel.csproj",
+      "projectUniqueName": "C:\\Users\\seang\\OneDrive\\Desktop\\Revature\\Project0\\ProjModel\\ProjModel.csproj",
       "projectName": "ProjModel",
-      "projectPath": "C:\\Users\\seang\\OneDrive\\Desktop\\Revature\\Revature\\Project0\\ProjModel\\ProjModel.csproj",
+      "projectPath": "C:\\Users\\seang\\OneDrive\\Desktop\\Revature\\Project0\\ProjModel\\ProjModel.csproj",
       "packagesPath": "C:\\Users\\seang\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\seang\\OneDrive\\Desktop\\Revature\\Revature\\Project0\\ProjModel\\obj\\",
+      "outputPath": "C:\\Users\\seang\\OneDrive\\Desktop\\Revature\\Project0\\ProjModel\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\seang\\AppData\\Roaming\\NuGet\\NuGet.Config"

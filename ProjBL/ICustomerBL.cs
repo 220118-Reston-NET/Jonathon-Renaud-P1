@@ -7,7 +7,7 @@ namespace ProjBL
 /// Business Layer is responsible for the processing of data obtained from either the database or...
 /// Based on the functionality that will be done
 /// </summary>
-public class ICustomerBL
+public interface ICustomerBL
 {
     /// <summary>
     /// Will add a customer to the database
@@ -16,6 +16,6 @@ public class ICustomerBL
     /// </summary>
     /// <param name="p_customer"></param>
     /// <returns></returns>
-    // Customer AddCustomer(Customer p_customer);
-}
+    Customer AddCustomer(Customer p_customer);
+    }
 }

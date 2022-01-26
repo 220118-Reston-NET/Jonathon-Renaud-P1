@@ -30,12 +30,12 @@
             set { _phoneNumber = value; }
         }
         
-        private List<string> _orders;
-        public List<string> Orders
-        {
-            get { return _orders; }
-            set { _orders = value; }
-        }
+        // private List<string> _orders;
+        // public List<string> Orders
+        // {
+        //     get { return _orders; }
+        //     set { _orders = value; }
+        // }
         
 
     }

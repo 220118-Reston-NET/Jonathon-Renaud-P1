@@ -15,5 +15,7 @@ public interface IRepository
     /// </summary>
     // Create new object
     // can also do a boolean below
-    // Customer AddCustomer(Customer p_customer);
+    Customer AddCustomer(Customer p_customer);
+
+    List<Customer> GetAllCustomers();
 }
