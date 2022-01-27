@@ -23,7 +23,7 @@ namespace ProjUI
                 case "1":
                     return "AddCustomer";
                 case "2":
-                    return "SearchForCustomer";
+                    return "SearchCustomer";
                 case "3":
                     return "Manager";
                 default:

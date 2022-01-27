@@ -37,6 +37,10 @@
         //     set { _orders = value; }
         // }
         
+        public override string ToString()
+        {
+            return $"Name: {Name}\nAddress: {Address}\nEmail: {Email}\nPhone Number: {PhoneNumber}";
+        }
 
     }
 

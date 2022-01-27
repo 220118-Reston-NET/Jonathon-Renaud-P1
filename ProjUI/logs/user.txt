@@ -1,0 +1,19 @@
+2022-01-27 10:40:53.621 -06:00 [INF] Displaying AddCustomer Menu to user
+2022-01-27 10:40:55.359 -06:00 [INF] Customer is being asked for their full name
+2022-01-27 10:40:58.449 -06:00 [INF] Displaying AddCustomer Menu to user
+2022-01-27 10:41:00.007 -06:00 [INF] Customer is being asked for their address
+2022-01-27 10:41:04.039 -06:00 [INF] Displaying AddCustomer Menu to user
+2022-01-27 10:41:05.380 -06:00 [INF] Customer is being asked for their email
+2022-01-27 10:41:09.449 -06:00 [INF] Displaying AddCustomer Menu to user
+2022-01-27 10:41:10.744 -06:00 [INF] Customer is being asked for their phone number
+2022-01-27 10:41:15.107 -06:00 [INF] Displaying AddCustomer Menu to user
+2022-01-27 10:41:16.406 -06:00 [INF] A new customer is being added 
+Name: Jonathon Renaud
+Address: 123 main
+Email: aads@asd.com
+Phone Number: 311133111
+2022-01-27 10:41:16.526 -06:00 [INF] Customer add was a success! -- Going back to MainMenu
+2022-01-27 10:41:16.526 -06:00 [INF] Displaying MainMenu to user
+2022-01-27 10:41:20.904 -06:00 [INF] Displaying SearchCustomer Menu to user
+2022-01-27 10:41:30.655 -06:00 [INF] Displaying MainMenu to user
+2022-01-27 10:42:03.829 -06:00 [INF] Exiting Application
