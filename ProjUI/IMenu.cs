@@ -16,5 +16,11 @@ namespace ProjUI
         /// <returns>Return the menu that will change your screen</returns>
         string UserChoice();
 
+        static void PressEnter(){
+            Console.WriteLine("Please press Enter to continue");
+            Console.ReadLine();
+
+        }
+
     }
 }

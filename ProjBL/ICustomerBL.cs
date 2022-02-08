@@ -23,6 +23,10 @@ public interface ICustomerBL
 /// </summary>
 /// <param name="p_name">Name parameter used to filter customers</param>
 /// <returns>Gives a filtered list of customers by name</returns>
-    List<Customer> SearchCustomer(string p_name);
+    List<Customer> SearchCustomerByName(string p_name);
+    List<Customer> SearchCustomerByAddress(string p_address);
+    List<Customer> SearchCustomerByPhoneNumber(string p_phoneNumber);
+    List<Customer> SearchCustomerByEmail(string p_email);
+
     }
 }

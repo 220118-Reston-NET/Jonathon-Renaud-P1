@@ -28,8 +28,8 @@ namespace ProjUI
                     return "Manager";
                 default:
                     Console.WriteLine("Please input a valid response");
-                    Console.WriteLine("Please press Enter to continue");
-                    Console.ReadLine();
+                    IMenu.PressEnter();
+                    
                     return "MainMenu";
             }
         }

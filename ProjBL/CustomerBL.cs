@@ -19,7 +19,8 @@ namespace ProjBL
             return _repo.AddCustomer(p_customer);
         }
 
-        public List<Customer> SearchCustomer(string p_name)
+        
+        public List<Customer> SearchCustomerByName(string p_name)
         {
             List<Customer> listOfCust = _repo.GetAllCustomers();
 
@@ -40,5 +41,27 @@ namespace ProjBL
             // }
 
         }
+
+        public List<Customer> SearchCustomerByAddress(string p_address)
+        {
+            List<Customer> listOfCust = _repo.GetAllCustomers();
+
+            return listOfCust.Where(cust => cust.Address.Contains(p_address)).ToList();
+        }
+
+        public List<Customer> SearchCustomerByPhoneNumber(string p_phoneNumber)
+        {
+            List<Customer> listOfCust = _repo.GetAllCustomers();
+
+            return listOfCust.Where(cust => cust.PhoneNumber.Contains(p_phoneNumber)).ToList();
+        }
+
+        public List<Customer> SearchCustomerByEmail(string p_email)
+        {
+            List<Customer> listOfCust = _repo.GetAllCustomers();
+            
+            return listOfCust.Where(cust => cust.Email.Contains(p_email)).ToList();
+        }
+
     }
 }
