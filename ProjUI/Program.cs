@@ -41,7 +41,14 @@ while (repeat)
             Log.Information("Displaying AddCustomer Menu to user");
             menu = new AddCustomerMenu(new CustomerBL(new SQLRepository(_connectionString)));
             break;
-
+        case "PlaceOrder":
+            Log.Information("Displaying order menu to user");
+            menu = new PlaceOrderMenu(new CustomerBL(new SQLRepository(_connectionString)), new StoreBL(new SQLRepository(_connectionString)));
+            break;
+        case "ViewOrderHistoryMenu":
+            Log.Information("Displaying view order history menu to user");
+            menu = new ViewOrderHistoryMenu(new CustomerBL(new SQLRepository(_connectionString)), new StoreBL(new SQLRepository(_connectionString)));
+            break;
         case "MainMenu":
             Log.Information("Displaying MainMenu to user");
             menu = new MainMenu();
@@ -71,6 +78,11 @@ while (repeat)
         case "ManagerMenu":
             Log.Information("Displaying Manager Menu to user");
             menu = new ManagerMenu();
+            break;
+
+        case "ReplenishInvMenu":
+            Log.Information("Displaying Replenish Inventory Menu to user");
+            menu = new ReplenishInvMenu(new StoreBL(new SQLRepository(_connectionString)));
             break;
 
         case "Exit":

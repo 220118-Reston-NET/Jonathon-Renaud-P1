@@ -30,7 +30,7 @@ namespace ProjUI
             switch(userInput)
             {
                 case "0":
-                    return "MainMenu";
+                    return "ManagerMenu";
 
                 case "1":
                     Console.WriteLine("Please enter the name to search by");
@@ -44,7 +44,7 @@ namespace ProjUI
                     }
                     // Logic to choose a customer to modify later with orders and stuff needs to be added
                     IMenu.PressEnter();
-                    return "MainMenu";
+                    return "SearchCustomer";
                     //This should change to the menu where we add orders, view orders, or view storefronts.
 
                  case "2":
@@ -58,7 +58,7 @@ namespace ProjUI
                         Console.WriteLine(item);
                     }
                     IMenu.PressEnter();;
-                    return "MainMenu";
+                    return "SearchCustomer";
 
                 case "3":
                     Console.WriteLine("Please enter the phone number or part of it to search by");
@@ -71,7 +71,7 @@ namespace ProjUI
                         Console.WriteLine(item);
                     }
                     IMenu.PressEnter();
-                    return "MainMenu";
+                    return "SearchCustomer";
 
                 case "4":
                     Console.WriteLine("Please enter the phone number or part of it to search by");
@@ -84,7 +84,7 @@ namespace ProjUI
                         Console.WriteLine(item);
                     }
                     IMenu.PressEnter();
-                    return "MainMenu";
+                    return "SearchCustomer";
 
                 default:
                     Console.WriteLine("Please input a valid response");

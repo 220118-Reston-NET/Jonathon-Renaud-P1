@@ -8,15 +8,13 @@ namespace ProjUI
         
          private static Customer _newCustomer = new Customer();
 
-        //Dependency Injection
-        //==========================
+       
         private ICustomerBL _customerBL;
         public AddCustomerMenu(ICustomerBL p_customerBL)
         {
             _customerBL = p_customerBL;
         }
-        //==========================
-        // stuff in code needs here
+        
 
         public void Display()
         {
@@ -63,7 +61,7 @@ namespace ProjUI
                 case "5":
                     try
                     {
-                        Log.Information("A new customer is being added \n" + _newCustomer);
+                        Log.Information("A new customer is being added");
                         _customerBL.AddCustomer(_newCustomer);
                         Log.Information("Customer add was a success! -- Going back to MainMenu");
                     }

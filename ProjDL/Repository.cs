@@ -30,5 +30,57 @@ namespace ProjDL
             // need to handle if there is no .json created yet. try/catch block creating new object if not found. 
             return JsonSerializer.Deserialize<List<Customer>>(_jsonString);
         }
+
+        public List<Orders> GetAllOrders()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Orders> GetAllOrdersByCustomer(int p_custID)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Orders> GetAllOrdersByStoreAddress(int storeID)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Products> GetLineItemDetails(int orderID)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Products> GetProductsByStore(string p_address)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<StoreFront> GetStoreFronts()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Orders InitializeOrder(Orders p_order)
+        {
+            throw new NotImplementedException();
+        }
+
+        public LineItems MakeOrder(LineItems p_lineItems, int quantity, int p_storeID)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool StoreQuantityIsLessThanOrdered(int choiceID, int itemOrdered, int storeID)
+        {
+            throw new NotImplementedException();
+        }
+
+    
+
+        public void UpdateInventory(int p_productID, int p_quantity, int p_storeID)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

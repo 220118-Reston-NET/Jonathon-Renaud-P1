@@ -2,12 +2,17 @@ namespace ProjModel
 {
     public class LineItems
     {
-        public string Product { get; set; }
-        private int _quantity;
-        public int Quantity
+        public int ProductID { get; set; }
+        private int _productQuantity;
+        public int ProductQuantity
         {
-            get { return _quantity; }
-            set { _quantity = value; }
+            get { return _productQuantity; }
+            set { _productQuantity = value; }
+        }
+
+         public override string ToString()
+        {
+            return $"========================\nID: {ProductID}\nQuantity: {ProductQuantity}\n";
         }
         
     }

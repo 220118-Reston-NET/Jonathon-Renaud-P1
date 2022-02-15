@@ -16,6 +16,17 @@ public interface IRepository
     // Create new object
     // can also do a boolean below
     Customer AddCustomer(Customer p_customer);
-
+    Orders InitializeOrder(Orders p_order);
     List<Customer> GetAllCustomers();
+    List<Products> GetProductsByStore(string p_address);
+    List<StoreFront> GetStoreFronts();
+    void UpdateInventory(int p_productID, int p_quantity, int p_storeID);
+    LineItems MakeOrder(LineItems p_lineItems, int quantity, int p_storeID);
+    List<Orders> GetAllOrders();
+    List<Orders> GetAllOrdersByCustomer(int p_custID);
+    List<Orders> GetAllOrdersByStoreAddress(int storeID);
+
+    List<Products> GetLineItemDetails(int orderID);
+    Boolean StoreQuantityIsLessThanOrdered(int choiceID, int itemOrdered, int storeID);
+
 }

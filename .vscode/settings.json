@@ -5,6 +5,7 @@
         "Magasin",
         "projectstoredb",
         "Renaud",
-        "Serilog"
+        "Serilog",
+        "Xunit"
     ]
 }
