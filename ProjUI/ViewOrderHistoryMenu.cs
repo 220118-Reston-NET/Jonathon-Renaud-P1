@@ -39,6 +39,7 @@ namespace ProjUI
 
                 try
                 {
+                    Log.Information("User has chosen to search for orders by email");
                     Console.WriteLine("Please enter the email to search by:");
                     string userEmail = Console.ReadLine();
                     List<Customer> listOfCustomers = _customerBL.SearchCustomerByEmail(userEmail);
@@ -55,7 +56,7 @@ namespace ProjUI
                 }
                 catch (System.Exception exc)
                 {
-                    
+                    Log.Warning("User was unable to search for orders by email");
                     Console.WriteLine(exc.Message, "Unable to retreive customer, most likely email is incorrect.");
                     IMenu.PressEnter();
 
@@ -68,6 +69,7 @@ namespace ProjUI
 
                 try
                 {   
+                    Log.Information("User has chosen to search for orders by store address ");
                     Console.WriteLine("Please enter the address to search by:");
                     string userAddress = Console.ReadLine();
                     List<StoreFront> listOfStores = _storeBL.SearchStoreByAddress(userAddress);
@@ -84,13 +86,16 @@ namespace ProjUI
                 }
                 catch (System.Exception exc)
                 {
-                    
+                    Log.Warning("User was unable to search for orders by store address");
                     Console.WriteLine(exc.Message, "Unable to retreive storefront, most likely address is incorrect.");
                     IMenu.PressEnter();
 
-                }                return "ViewOrderHistoryMenu";
+                }                
+                return "ViewOrderHistoryMenu";
 
                 case "3":
+                try{
+                    Log.Information("User has chosen to view items in an order by order id");
                 Console.WriteLine("Please enter the order number you wish to see line items for:");
                 int userOrder = Convert.ToInt32(Console.ReadLine());
                 List<Products> listOfProducts = _storeBL.GetProductsInOrder(userOrder);
@@ -98,13 +103,22 @@ namespace ProjUI
                 {
                     Console.WriteLine(item);                    
                 }
+                }
+                catch(System.Exception exc)
+                {
+                    Log.Warning("User was unable to retrieve products in an order by id");
+                    Console.WriteLine(exc.Message, "Unable to retreive storefront, most likely address is incorrect.");
+                }
+
                 IMenu.PressEnter();
                 return "ViewOrderHistoryMenu";
 
                 case "0":
+                Log.Information("User has chosen to go to previous menu - Manager Menu");
                 return "ManagerMenu";
                 
                 default:
+                Log.Warning("User has provided an invalid input");
                 Console.WriteLine("Please enter a valid selection");
                 IMenu.PressEnter();
                 return "ViewOrderHistoryMenu";

@@ -19,16 +19,19 @@ namespace ProjUI
             switch (userInput)
             {
                 case "0":
+                    Log.Information("Exiting the application");
                     return "Exit";
                 case "1":
+                    Log.Information("Navigating to the add a new Customer menu");
                     return "AddCustomer";
                 case "2":
+                    Log.Information("Navigating back to the customer order menu");
                     return "PlaceOrder";
                 case "3":
+                    Log.Information("User has selected Manager menu and will be asked to confirm password");
                     return "Manager";
-                case "4":
-                    return "PlaceOrder";
                 default:
+                    Log.Information("An invalid input was put in - navigating back to this menu");
                     Console.WriteLine("Please input a valid response");
                     IMenu.PressEnter();
                     

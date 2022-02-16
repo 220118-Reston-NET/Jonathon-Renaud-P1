@@ -27,6 +27,7 @@ namespace ProjUI
             Console.WriteLine("[1] Place order");
             Console.WriteLine("[2] Review previous orders");
             Console.WriteLine("[3] Display all items in a specific past order");
+            Console.WriteLine("[4] Display all store locations");
             Console.WriteLine("[0] Return to previous menu");
         }
 
@@ -37,6 +38,7 @@ namespace ProjUI
             switch(userInput)
             {
                 case "1":
+                Log.Information("User chose to place order: asking for email");
                 Console.WriteLine("Enter customer email");
                 string userEmail = Console.ReadLine();
 
@@ -51,10 +53,11 @@ namespace ProjUI
                     IMenu.PressEnter();
                     return "PlaceOrder";
                 }
-
+                Log.Information("Found the corresponding customer: asking user for store address");
                 Console.WriteLine("Which store location do you wish to shop at today? (enter address)");
 
                 string userStoreChoice = Console.ReadLine();
+                
                 
 
                 try 
@@ -77,12 +80,13 @@ namespace ProjUI
                 }
                 catch(System.Exception exc)
                 {
+                    Log.Warning("Something went wrong while trying to display items at specific location");
                     Console.WriteLine(exc +"\n Something happened, going back to previous menu.");
                     IMenu.PressEnter();
                     return "PlaceOrder";
 
                 }
-
+                Log.Information("Displayed items at the selected store to customer, asking for next option");
                 List<LineItems> itemsInCart = new List<LineItems>();
                 bool userWantsToShop = true;
                 while(userWantsToShop)
@@ -103,11 +107,11 @@ namespace ProjUI
                                 List<StoreFront> listOfStores3 = _storeBL.ViewStoreInventory(userStoreChoice);
                                 int storeID = listOfStores3[0].StoreID;
 
-
+                                Log.Information("User chose to add an item to cart: asking for product id");
                                 Console.WriteLine("Please select an item ID to add to cart");
                                 int choiceID = Convert.ToInt32(Console.ReadLine());
 
-                            
+                                Log.Information("Asking user for amount to purchase");
                                 Console.WriteLine("Please enter how many you wish to purchase:");
                                 int quantitySelected = Convert.ToInt32(Console.ReadLine());
 
@@ -121,13 +125,14 @@ namespace ProjUI
                                 }
                                 else
                                 {
+                                    Log.Warning("User tried to order more than was available.");
                                     Console.WriteLine("The quantity you are trying to order is more than available");
                                     IMenu.PressEnter();
                                 }
                             }
                             catch (System.Exception exc)
                             {
-                                
+                                Log.Warning("Something wrong happened.");
                                 Console.WriteLine(exc.Message + "Something went wrong...");
                                 IMenu.PressEnter();
                             }
@@ -139,7 +144,7 @@ namespace ProjUI
 
                                 int keyValueID = 0;
                                 double totalSpent = 0;
-
+                                Log.Information("User chose to review cart: displaying cart to user");
                                 List<StoreFront> listOfStores = _storeBL.ViewStoreInventory(userStoreChoice);
                                 List<Products> listOfStoreProducts = _storeBL.GetProductsByStore(listOfStores[0].Address);
 
@@ -161,6 +166,7 @@ namespace ProjUI
                                 }
                                 catch(System.Exception exc)
                                 {
+                                    Log.Warning("Something went wrong.");
                                     Console.WriteLine(exc.Message);
                                     IMenu.PressEnter();
                                 }
@@ -171,7 +177,7 @@ namespace ProjUI
                                 List<Customer> listOfCustomers = _customerBL.SearchCustomerByEmail(userEmail);
                                 List<StoreFront> listOfStores4 = _storeBL.ViewStoreInventory(userStoreChoice);
                                 List<Products> listOfStoreProducts2 = _storeBL.GetProductsByStore(listOfStores4[0].Address);
-                                
+                                Log.Information("User chose to check out: finalizing order");
                                     try
                                     {Console.WriteLine("Finalizing order...\n");
 
@@ -206,10 +212,11 @@ namespace ProjUI
                                     {
                                         _storeBL.MakeOrder(item, _newOrder.OrderID, listOfStores2[0].StoreID);
                                     }
-
+                                    Log.Information("Order "+_newOrder.OrderID+" was made successfully");
                                     }
                                     catch(System.Exception exc)
                                     {
+                                        Log.Warning("Something went wrong finalizing the order");
                                         Console.WriteLine(exc.Message);
                                         IMenu.PressEnter();
                                     }
@@ -221,6 +228,7 @@ namespace ProjUI
 
                         default:
                                 userWantsToShop = false;
+                                Log.Warning("Something went wrong...on the place order menu");
                                 Console.WriteLine("Invalid choice, returning to previous menu");
                                 break;
                                 
@@ -231,6 +239,7 @@ namespace ProjUI
                 case "2": 
                 try
                 {
+                    Log.Information("User chose to view previous orders: asking for email.");
                     Console.WriteLine("Please enter the email to search by:");
                     string userEmail2 = Console.ReadLine();
                     List<Customer> listOfCustomers = _customerBL.SearchCustomerByEmail(userEmail2);
@@ -242,12 +251,13 @@ namespace ProjUI
                             {
                                 Console.WriteLine(item);
                             }
+                    Log.Information("Previous orders by email search are displayed to user");
                     IMenu.PressEnter();
                     
                 }
                 catch (System.Exception exc)
                 {
-                    
+                    Log.Warning("Something went wrong.. on the view previous orders option");
                     Console.WriteLine(exc.Message, "Unable to retreive customer, most likely email is incorrect.");
                     IMenu.PressEnter();
 
@@ -255,6 +265,9 @@ namespace ProjUI
                 return "PlaceOrder";
 
                 case "3":
+                try
+                {
+                Log.Information("User wants to see specific items in an order: asking for order number");
                 Console.WriteLine("Please enter the order number you wish to see line items for:");
                 int userOrder = Convert.ToInt32(Console.ReadLine());
                 List<Products> listOfProducts = _storeBL.GetProductsInOrder(userOrder);
@@ -263,12 +276,43 @@ namespace ProjUI
                     Console.WriteLine(item);                    
                 }
                 IMenu.PressEnter();
+                }
+                catch(System.Exception exc)
+                {
+                    Log.Warning("Something went wrong on the view products in an order option");
+                    Console.WriteLine(exc);
+                    IMenu.PressEnter();
+                }
+                return "PlaceOrder";
+
+                case "4":
+                try
+                {
+                    Log.Information("User wants to view all store locations");
+                    List<StoreFront> listOfStores = _storeBL.GetAllStores();
+
+                    foreach (var item in listOfStores)
+                    {
+                        Console.WriteLine("Name: "+item.Name+"\n"+"Store ID: " +item.StoreID+"\n"+"Address: "+item.Address+"\n===========================\n");
+                    }
+
+                }
+                catch (System.Exception exc)
+                {
+                    
+                    Log.Warning("User was unable to view the store inventory");
+                    Console.WriteLine(exc.Message);
+                }
+
+                IMenu.PressEnter();
                 return "PlaceOrder";
 
                 case "0":
+                Log.Information("User chose to go back to main menu");
                 return "MainMenu";
                 default:
-                return "MainMenu";
+                Log.Warning("User had a bad input, returned to same menu (Placeordermenu)");
+                return "PlaceOrder";
                 
                 
 

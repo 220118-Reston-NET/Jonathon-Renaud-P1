@@ -23,6 +23,7 @@ namespace ProjBL
         List<Orders> GetOrdersByStoreAddress(string p_searchCriteria);
         List<Products> GetProductsInOrder(int p_orderID);
         bool StoreQuantityIsLessThanOrdered(int p_id, int p_quantity, int p_storeID);
+        List<StoreFront> GetAllStores();
 
 
         

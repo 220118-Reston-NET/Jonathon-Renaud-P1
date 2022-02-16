@@ -1,169 +1,3 @@
-2022-01-27 10:40:53.621 -06:00 [INF] Displaying AddCustomer Menu to user
-2022-01-27 10:40:55.359 -06:00 [INF] Customer is being asked for their full name
-2022-01-27 10:40:58.449 -06:00 [INF] Displaying AddCustomer Menu to user
-2022-01-27 10:41:00.007 -06:00 [INF] Customer is being asked for their address
-2022-01-27 10:41:04.039 -06:00 [INF] Displaying AddCustomer Menu to user
-2022-01-27 10:41:05.380 -06:00 [INF] Customer is being asked for their email
-2022-01-27 10:41:09.449 -06:00 [INF] Displaying AddCustomer Menu to user
-2022-01-27 10:41:10.744 -06:00 [INF] Customer is being asked for their phone number
-2022-01-27 10:41:15.107 -06:00 [INF] Displaying AddCustomer Menu to user
-2022-01-27 10:41:16.406 -06:00 [INF] A new customer is being added 
-Name: Jonathon Renaud
-Address: 123 main
-Email: aads@asd.com
-Phone Number: 311133111
-2022-01-27 10:41:16.526 -06:00 [INF] Customer add was a success! -- Going back to MainMenu
-2022-01-27 10:41:16.526 -06:00 [INF] Displaying MainMenu to user
-2022-01-27 10:41:20.904 -06:00 [INF] Displaying SearchCustomer Menu to user
-2022-01-27 10:41:30.655 -06:00 [INF] Displaying MainMenu to user
-2022-01-27 10:42:03.829 -06:00 [INF] Exiting Application
-2022-01-27 15:07:32.021 -06:00 [INF] Displaying AddCustomer Menu to user
-2022-01-27 15:07:35.089 -06:00 [INF] Customer is being asked for their full name
-2022-01-27 15:07:42.322 -06:00 [INF] Displaying AddCustomer Menu to user
-2022-01-27 15:07:43.098 -06:00 [INF] Navigating back to MainMenu
-2022-01-27 15:07:43.098 -06:00 [INF] Displaying MainMenu to user
-2022-01-27 15:07:44.619 -06:00 [INF] Displaying SearchCustomer Menu to user
-2022-02-07 11:13:05.808 -06:00 [INF] Displaying AddCustomer Menu to user
-2022-02-07 11:13:08.832 -06:00 [INF] Customer is being asked for their full name
-2022-02-07 11:13:13.780 -06:00 [INF] Displaying AddCustomer Menu to user
-2022-02-07 11:13:15.195 -06:00 [INF] Customer is being asked for their address
-2022-02-07 11:13:24.514 -06:00 [INF] Displaying AddCustomer Menu to user
-2022-02-07 11:13:26.087 -06:00 [INF] Customer is being asked for their email
-2022-02-07 11:13:29.466 -06:00 [INF] Displaying AddCustomer Menu to user
-2022-02-07 11:13:31.143 -06:00 [INF] Customer is being asked for their phone number
-2022-02-07 11:13:40.219 -06:00 [INF] Displaying AddCustomer Menu to user
-2022-02-07 11:13:41.951 -06:00 [INF] A new customer is being added 
-Name: Jonathon Renaud
-Address: 123 Main Street, PC FL 32401
-Email: jon@jon.com
-Phone Number: 8501231234
-2022-02-07 11:13:43.317 -06:00 [INF] Customer add was a success! -- Going back to MainMenu
-2022-02-07 11:13:43.317 -06:00 [INF] Displaying MainMenu to user
-2022-02-07 11:16:35.617 -06:00 [INF] Displaying AddCustomer Menu to user
-2022-02-07 11:16:40.239 -06:00 [INF] Customer is being asked for their full name
-2022-02-07 11:16:45.960 -06:00 [INF] Displaying AddCustomer Menu to user
-2022-02-07 11:16:47.350 -06:00 [INF] A new customer is being added 
-Name: Adf Even
-Address: 123 Main Street, PC FL 32401
-Email: jon@jon.com
-Phone Number: 8501231234
-2022-02-07 11:16:47.565 -06:00 [WRN] Customer addition was NOT successful for some unknown reason
-2022-02-07 11:16:49.242 -06:00 [INF] Displaying MainMenu to user
-2022-02-07 11:16:50.662 -06:00 [INF] Exiting Application
-2022-02-07 11:17:28.171 -06:00 [INF] Displaying AddCustomer Menu to user
-2022-02-07 11:17:29.342 -06:00 [INF] Customer is being asked for their full name
-2022-02-07 11:17:31.466 -06:00 [INF] Displaying AddCustomer Menu to user
-2022-02-07 11:17:32.855 -06:00 [INF] Customer is being asked for their address
-2022-02-07 11:17:34.703 -06:00 [INF] Displaying AddCustomer Menu to user
-2022-02-07 11:17:38.224 -06:00 [INF] Invalid input-- going back to addcustomer menu
-2022-02-07 11:17:39.795 -06:00 [INF] Displaying AddCustomer Menu to user
-2022-02-07 11:17:43.642 -06:00 [INF] Invalid input-- going back to addcustomer menu
-2022-02-07 11:17:44.211 -06:00 [INF] Displaying AddCustomer Menu to user
-2022-02-07 11:17:45.032 -06:00 [INF] Customer is being asked for their full name
-2022-02-07 11:17:47.673 -06:00 [INF] Displaying AddCustomer Menu to user
-2022-02-07 11:17:48.723 -06:00 [INF] Customer is being asked for their address
-2022-02-07 11:17:56.582 -06:00 [INF] Displaying AddCustomer Menu to user
-2022-02-07 11:17:58.304 -06:00 [INF] Customer is being asked for their email
-2022-02-07 11:18:05.163 -06:00 [INF] Displaying AddCustomer Menu to user
-2022-02-07 11:18:06.590 -06:00 [INF] Customer is being asked for their phone number
-2022-02-07 11:18:10.803 -06:00 [INF] Displaying AddCustomer Menu to user
-2022-02-07 11:18:12.801 -06:00 [INF] A new customer is being added 
-Name: Juni Teue
-Address: 134 Main St, Pc FL 32401
-Email: juni@jon.com
-Phone Number: 8503213214
-2022-02-07 11:18:13.842 -06:00 [INF] Customer add was a success! -- Going back to MainMenu
-2022-02-07 11:18:13.842 -06:00 [INF] Displaying MainMenu to user
-2022-02-07 11:18:17.396 -06:00 [INF] Displaying SearchCustomer Menu to user
-2022-02-07 11:18:26.778 -06:00 [INF] Displaying MainMenu to user
-2022-02-07 11:18:28.424 -06:00 [INF] Exiting Application
-2022-02-07 11:18:54.201 -06:00 [INF] Displaying AddCustomer Menu to user
-2022-02-07 11:18:55.810 -06:00 [INF] Navigating back to MainMenu
-2022-02-07 11:18:55.811 -06:00 [INF] Displaying MainMenu to user
-2022-02-07 11:18:57.002 -06:00 [INF] Displaying SearchCustomer Menu to user
-2022-02-07 11:19:03.518 -06:00 [INF] Displaying MainMenu to user
-2022-02-07 11:19:05.382 -06:00 [INF] Displaying SearchCustomer Menu to user
-2022-02-07 11:19:10.778 -06:00 [INF] Displaying MainMenu to user
-2022-02-07 11:19:12.806 -06:00 [INF] Displaying SearchCustomer Menu to user
-2022-02-07 11:19:32.647 -06:00 [INF] Displaying MainMenu to user
-2022-02-07 11:20:37.934 -06:00 [INF] Exiting Application
-2022-02-07 14:13:05.362 -06:00 [INF] Displaying AddCustomer Menu to user
-2022-02-07 14:13:07.174 -06:00 [INF] Customer is being asked for their full name
-2022-02-07 14:13:15.452 -06:00 [INF] Displaying AddCustomer Menu to user
-2022-02-07 14:13:16.548 -06:00 [INF] Customer is being asked for their address
-2022-02-07 14:13:19.552 -06:00 [INF] Displaying AddCustomer Menu to user
-2022-02-07 14:13:21.702 -06:00 [INF] Customer is being asked for their email
-2022-02-07 14:13:28.717 -06:00 [INF] Displaying AddCustomer Menu to user
-2022-02-07 14:13:29.943 -06:00 [INF] Customer is being asked for their phone number
-2022-02-07 14:13:34.813 -06:00 [INF] Displaying AddCustomer Menu to user
-2022-02-07 14:13:36.659 -06:00 [INF] A new customer is being added 
-Name: Jonas Smith
-Address: 8383 Main 
-Email: jon@jon,com
-Phone Number: 8501231231
-2022-02-07 14:13:37.896 -06:00 [INF] Customer add was a success! -- Going back to MainMenu
-2022-02-07 14:13:37.897 -06:00 [INF] Displaying MainMenu to user
-2022-02-07 14:13:41.597 -06:00 [INF] Displaying SearchCustomer Menu to user
-2022-02-07 14:13:49.642 -06:00 [INF] Displaying MainMenu to user
-2022-02-07 23:10:58.550 -06:00 [INF] Exiting Application
-2022-02-08 11:14:45.743 -06:00 [INF] Displaying SearchCustomer Menu to user
-2022-02-08 11:14:53.756 -06:00 [INF] Displaying MainMenu to user
-2022-02-08 11:29:44.115 -06:00 [INF] Exiting Application
-2022-02-08 11:30:10.029 -06:00 [INF] Displaying MainMenu to user
-2022-02-08 11:34:00.885 -06:00 [INF] Exiting Application
-2022-02-08 11:34:25.437 -06:00 [INF] Displaying SearchCustomer Menu to user
-2022-02-08 11:34:30.604 -06:00 [INF] Displaying MainMenu to user
-2022-02-08 11:34:38.756 -06:00 [INF] Displaying SearchCustomer Menu to user
-2022-02-08 11:34:44.088 -06:00 [INF] Displaying MainMenu to user
-2022-02-08 11:34:57.880 -06:00 [INF] Displaying SearchCustomer Menu to user
-2022-02-08 11:35:03.388 -06:00 [INF] Displaying MainMenu to user
-2022-02-08 11:56:56.499 -06:00 [INF] Exiting Application
-2022-02-08 11:57:17.514 -06:00 [INF] Asking for manager password from user
-2022-02-08 11:57:20.221 -06:00 [INF] Displaying Manager Menu to user
-2022-02-08 11:57:32.292 -06:00 [INF] Asking for manager password from user
-2022-02-08 11:57:33.237 -06:00 [INF] Wrong password was entered by user
-2022-02-08 11:57:34.308 -06:00 [INF] Displaying MainMenu to user
-2022-02-08 11:57:34.309 -06:00 [INF] Displaying Manager Menu to user
-2022-02-08 11:58:31.482 -06:00 [INF] Asking for manager password from user
-2022-02-08 11:58:33.283 -06:00 [INF] Wrong password was entered by user
-2022-02-08 11:58:34.213 -06:00 [INF] Displaying MainMenu to user
-2022-02-08 11:58:36.078 -06:00 [INF] Asking for manager password from user
-2022-02-08 11:58:36.932 -06:00 [INF] Wrong password was entered by user
-2022-02-08 11:58:37.497 -06:00 [INF] Displaying MainMenu to user
-2022-02-08 11:58:42.293 -06:00 [INF] Asking for manager password from user
-2022-02-08 11:58:43.325 -06:00 [INF] Wrong password was entered by user
-2022-02-08 11:58:44.000 -06:00 [INF] Displaying MainMenu to user
-2022-02-08 11:58:48.725 -06:00 [INF] Displaying MainMenu to user
-2022-02-08 11:58:49.677 -06:00 [INF] Asking for manager password from user
-2022-02-08 11:58:51.247 -06:00 [INF] Displaying Manager Menu to user
-2022-02-08 15:00:03.113 -06:00 [INF] Displaying AddCustomer Menu to user
-2022-02-08 15:00:06.230 -06:00 [INF] Customer is being asked for their full name
-2022-02-08 15:00:10.218 -06:00 [INF] Displaying AddCustomer Menu to user
-2022-02-08 15:00:11.366 -06:00 [INF] Customer is being asked for their address
-2022-02-08 15:00:12.601 -06:00 [INF] Displaying AddCustomer Menu to user
-2022-02-08 15:00:14.235 -06:00 [INF] Customer is being asked for their email
-2022-02-08 15:00:17.835 -06:00 [INF] Displaying AddCustomer Menu to user
-2022-02-08 15:00:18.826 -06:00 [INF] Customer is being asked for their phone number
-2022-02-08 15:00:21.565 -06:00 [INF] Displaying AddCustomer Menu to user
-2022-02-08 15:00:23.325 -06:00 [INF] A new customer is being added 
-Name: Jonathon Rneuadsadasdasd
-Address: 456
-Email: jonasdnsa@jon.com
-Phone Number: 8751564651
-2022-02-08 15:00:24.560 -06:00 [INF] Customer add was a success! -- Going back to MainMenu
-2022-02-08 15:00:24.560 -06:00 [INF] Displaying MainMenu to user
-2022-02-08 15:00:47.749 -06:00 [INF] Displaying SearchCustomer Menu to user
-2022-02-08 15:01:35.569 -06:00 [INF] Displaying MainMenu to user
-2022-02-08 15:01:36.710 -06:00 [INF] Displaying SearchCustomer Menu to user
-2022-02-08 15:01:44.214 -06:00 [INF] Displaying MainMenu to user
-2022-02-08 15:01:45.452 -06:00 [INF] Displaying SearchCustomer Menu to user
-2022-02-08 15:01:57.875 -06:00 [INF] Displaying MainMenu to user
-2022-02-08 15:01:59.228 -06:00 [INF] Displaying AddCustomer Menu to user
-2022-02-08 15:02:04.948 -06:00 [INF] A new customer is being added 
-Name: Jonathon Rneuadsadasdasd
-Address: 456
-Email: jonasdnsa@jon.com
-Phone Number: 8751564651
 2022-02-08 15:02:05.036 -06:00 [WRN] Customer addition was NOT successful for some unknown reason
 2022-02-08 15:02:44.833 -06:00 [INF] Displaying MainMenu to user
 2022-02-08 15:02:47.140 -06:00 [INF] Asking for manager password from user
@@ -852,3 +686,86 @@ Phone Number: 8751564651
 2022-02-15 15:09:36.755 -06:00 [INF] Displaying order menu to user
 2022-02-15 15:09:38.493 -06:00 [INF] Displaying MainMenu to user
 2022-02-15 15:09:39.002 -06:00 [INF] Exiting Application
+2022-02-15 21:46:21.853 -06:00 [INF] User has selected Manager menu and will be asked to confirm password
+2022-02-15 21:46:21.890 -06:00 [INF] Asking for manager password from user
+2022-02-15 21:46:23.504 -06:00 [INF] Correct password was entered -- Displaying Manager Menu to user
+2022-02-15 21:46:24.523 -06:00 [INF] Navigating to the inventory control menu
+2022-02-15 21:46:24.524 -06:00 [INF] Displaying Replenish Inventory Menu to user
+2022-02-15 21:46:25.800 -06:00 [INF] User wants to view all store locations
+2022-02-15 21:46:27.839 -06:00 [WRN] User was unable to view the store inventory
+2022-02-15 21:46:30.178 -06:00 [INF] Displaying Manager Menu to user
+2022-02-15 21:50:00.446 -06:00 [INF] Navigating back to MainMenu
+2022-02-15 21:50:00.447 -06:00 [INF] Displaying MainMenu to user
+2022-02-15 21:50:00.929 -06:00 [INF] Exiting the application
+2022-02-15 21:50:00.929 -06:00 [INF] Exiting Application
+2022-02-15 21:50:14.525 -06:00 [INF] User has selected Manager menu and will be asked to confirm password
+2022-02-15 21:50:14.604 -06:00 [INF] Asking for manager password from user
+2022-02-15 21:50:15.033 -06:00 [INF] Wrong password was entered by user
+2022-02-15 21:50:16.087 -06:00 [INF] Displaying MainMenu to user
+2022-02-15 21:50:16.766 -06:00 [INF] An invalid input was put in - navigating back to this menu
+2022-02-15 21:50:17.623 -06:00 [INF] Displaying MainMenu to user
+2022-02-15 21:50:18.745 -06:00 [INF] User has selected Manager menu and will be asked to confirm password
+2022-02-15 21:50:18.745 -06:00 [INF] Asking for manager password from user
+2022-02-15 21:50:20.009 -06:00 [INF] Correct password was entered -- Displaying Manager Menu to user
+2022-02-15 21:50:21.249 -06:00 [INF] Navigating to the inventory control menu
+2022-02-15 21:50:21.249 -06:00 [INF] Displaying Replenish Inventory Menu to user
+2022-02-15 21:50:22.262 -06:00 [INF] User wants to view all store locations
+2022-02-15 21:50:31.021 -06:00 [INF] Displaying Manager Menu to user
+2022-02-15 21:52:21.092 -06:00 [INF] Navigating back to MainMenu
+2022-02-15 21:52:21.092 -06:00 [INF] Displaying MainMenu to user
+2022-02-15 21:52:21.822 -06:00 [INF] Exiting the application
+2022-02-15 21:52:21.822 -06:00 [INF] Exiting Application
+2022-02-15 21:52:32.571 -06:00 [INF] Navigating back to the customer order menu
+2022-02-15 21:52:32.639 -06:00 [INF] Displaying order menu to user
+2022-02-15 21:52:35.426 -06:00 [INF] User wants to view all store locations
+2022-02-15 21:52:42.942 -06:00 [INF] Displaying order menu to user
+2022-02-15 21:52:46.127 -06:00 [INF] User chose to view previous orders: asking for email.
+2022-02-15 21:52:52.788 -06:00 [WRN] Something went wrong.. on the view previous orders option
+2022-02-15 21:52:55.057 -06:00 [INF] Displaying order menu to user
+2022-02-15 21:53:51.674 -06:00 [INF] User chose to go back to main menu
+2022-02-15 21:53:51.674 -06:00 [INF] Displaying MainMenu to user
+2022-02-15 21:53:52.693 -06:00 [INF] Exiting the application
+2022-02-15 21:53:52.693 -06:00 [INF] Exiting Application
+2022-02-15 21:54:06.354 -06:00 [INF] Navigating back to the customer order menu
+2022-02-15 21:54:06.407 -06:00 [INF] Displaying order menu to user
+2022-02-15 21:54:07.200 -06:00 [WRN] User had a bad input, returned to same menu (Placeordermenu)
+2022-02-15 21:54:07.201 -06:00 [INF] Displaying order menu to user
+2022-02-15 21:54:08.298 -06:00 [INF] User chose to place order: asking for email
+2022-02-15 21:54:10.071 -06:00 [INF] Displaying order menu to user
+2022-02-15 21:54:11.644 -06:00 [INF] User chose to place order: asking for email
+2022-02-15 21:54:16.597 -06:00 [INF] Displaying order menu to user
+2022-02-15 21:54:18.327 -06:00 [INF] User chose to place order: asking for email
+2022-02-15 21:54:21.520 -06:00 [INF] Found the corresponding customer: asking user for store address
+2022-02-15 21:54:26.521 -06:00 [INF] Displayed items at the selected store to customer, asking for next option
+2022-02-15 21:54:49.154 -06:00 [WRN] Something went wrong...on the place order menu
+2022-02-15 21:54:50.467 -06:00 [INF] Displaying order menu to user
+2022-02-15 21:54:55.585 -06:00 [INF] User wants to see specific items in an order: asking for order number
+2022-02-15 21:54:58.650 -06:00 [INF] Displaying order menu to user
+2022-02-15 21:55:03.833 -06:00 [WRN] User had a bad input, returned to same menu (Placeordermenu)
+2022-02-15 21:55:03.833 -06:00 [INF] Displaying order menu to user
+2022-02-15 21:55:04.572 -06:00 [WRN] User had a bad input, returned to same menu (Placeordermenu)
+2022-02-15 21:55:04.572 -06:00 [INF] Displaying order menu to user
+2022-02-15 21:55:04.767 -06:00 [WRN] User had a bad input, returned to same menu (Placeordermenu)
+2022-02-15 21:55:04.767 -06:00 [INF] Displaying order menu to user
+2022-02-15 21:55:04.928 -06:00 [WRN] User had a bad input, returned to same menu (Placeordermenu)
+2022-02-15 21:55:04.928 -06:00 [INF] Displaying order menu to user
+2022-02-15 21:55:05.080 -06:00 [WRN] User had a bad input, returned to same menu (Placeordermenu)
+2022-02-15 21:55:05.080 -06:00 [INF] Displaying order menu to user
+2022-02-15 21:55:05.226 -06:00 [WRN] User had a bad input, returned to same menu (Placeordermenu)
+2022-02-15 21:55:05.226 -06:00 [INF] Displaying order menu to user
+2022-02-15 21:55:05.367 -06:00 [WRN] User had a bad input, returned to same menu (Placeordermenu)
+2022-02-15 21:55:05.368 -06:00 [INF] Displaying order menu to user
+2022-02-15 21:55:06.016 -06:00 [INF] User wants to view all store locations
+2022-02-15 21:55:07.146 -06:00 [INF] Displaying order menu to user
+2022-02-15 21:55:07.994 -06:00 [INF] User wants to see specific items in an order: asking for order number
+2022-02-15 21:55:10.901 -06:00 [INF] Displaying order menu to user
+2022-02-15 21:55:16.833 -06:00 [INF] User wants to see specific items in an order: asking for order number
+2022-02-15 21:55:18.840 -06:00 [INF] Displaying order menu to user
+2022-02-15 21:55:20.156 -06:00 [INF] User wants to see specific items in an order: asking for order number
+2022-02-15 21:55:22.479 -06:00 [INF] Displaying order menu to user
+2022-02-15 21:55:24.282 -06:00 [INF] User wants to see specific items in an order: asking for order number
+2022-02-15 21:55:25.611 -06:00 [INF] Displaying order menu to user
+2022-02-15 21:55:33.806 -06:00 [INF] User chose to go back to main menu
+2022-02-15 21:55:33.806 -06:00 [INF] Displaying MainMenu to user
+2022-02-15 21:56:20.580 -06:00 [INF] Exiting the application
+2022-02-15 21:56:20.581 -06:00 [INF] Exiting Application

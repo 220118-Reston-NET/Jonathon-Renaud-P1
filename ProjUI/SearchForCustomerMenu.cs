@@ -30,9 +30,11 @@ namespace ProjUI
             switch(userInput)
             {
                 case "0":
+                    Log.Information("User has chosen to go to previous menu- Manager Menu");
                     return "ManagerMenu";
 
                 case "1":
+                    Log.Information("User has chosen to search for a customer by name");
                     Console.WriteLine("Please enter the name to search by");
                     string name = Console.ReadLine();
 
@@ -42,12 +44,11 @@ namespace ProjUI
                         Console.WriteLine("======================");
                         Console.WriteLine(item);
                     }
-                    // Logic to choose a customer to modify later with orders and stuff needs to be added
                     IMenu.PressEnter();
                     return "SearchCustomer";
-                    //This should change to the menu where we add orders, view orders, or view storefronts.
 
                  case "2":
+                    Log.Information("User has chosen to search for a customer by Address");
                     Console.WriteLine("Please enter the address or part of it to search by");
                     string address = Console.ReadLine();
 
@@ -61,6 +62,7 @@ namespace ProjUI
                     return "SearchCustomer";
 
                 case "3":
+                    Log.Information("User has chosen to search for a customer by Phone Number");
                     Console.WriteLine("Please enter the phone number or part of it to search by");
                     string phoneNumber = Console.ReadLine();
 
@@ -74,6 +76,7 @@ namespace ProjUI
                     return "SearchCustomer";
 
                 case "4":
+                    Log.Information("User has chosen to search for a customer by email ");
                     Console.WriteLine("Please enter the phone number or part of it to search by");
                     string email = Console.ReadLine();
 
@@ -87,6 +90,7 @@ namespace ProjUI
                     return "SearchCustomer";
 
                 default:
+                    Log.Warning("User has provided an invalid input - going to current menu - search customer");
                     Console.WriteLine("Please input a valid response");
                     IMenu.PressEnter();
                     return "SearchCustomer";

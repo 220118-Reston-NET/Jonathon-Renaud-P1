@@ -92,6 +92,7 @@ while (repeat)
             break;
 
         default:
+            Log.Warning("User tried to input a wrong input");
             Console.WriteLine("Page does not exist!");
             IMenu.PressEnter();
             break;

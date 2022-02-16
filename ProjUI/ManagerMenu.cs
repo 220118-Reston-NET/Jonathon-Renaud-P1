@@ -19,15 +19,19 @@ namespace ProjUI
             switch (userInput)
             {
                 case "0":
+                    Log.Information("Navigating back to MainMenu");
                     return "MainMenu";
                 case "1":
+                    Log.Information("Navigating to the inventory control menu");
                     return "ReplenishInvMenu";
-
                 case "2":
+                    Log.Information("Navigating to the order history menu");
                     return "ViewOrderHistoryMenu";
                 case "3":
+                    Log.Information("Navigating to the search for customer menu");
                     return "SearchCustomer";
                 default:
+                    Log.Information("An invalid input was received. Navigating back to this menu");
                     Console.WriteLine("Please input a valid response");
                     IMenu.PressEnter();
                     return "ManagerMenu";

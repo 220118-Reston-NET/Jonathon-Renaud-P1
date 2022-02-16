@@ -119,5 +119,10 @@ namespace ProjBL
         {
             return _repo.StoreQuantityIsLessThanOrdered(p_id, p_quantity, p_storeID);
         }
+
+        public List<StoreFront> GetAllStores()
+        {
+            return _repo.GetStoreFronts();
+        }
     }
 }
