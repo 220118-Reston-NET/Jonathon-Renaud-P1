@@ -7,11 +7,20 @@ namespace ProjBL
     public class CustomerBL : ICustomerBL
     {
         private IRepository _repo;
+        /// <summary>
+        /// Constructor - Dependency Injection
+        /// </summary>
+        /// <param name="p_repo"></param>
         public CustomerBL(IRepository p_repo)
         {
             _repo = p_repo;
         }
 
+/// <summary>
+/// Will take in a Customer object, retreive all the current customers stored as a list, and add this object to that list
+/// </summary>
+/// <param name="p_customer"></param>
+/// <returns></returns>
         public Customer AddCustomer(Customer p_customer)
         {
             List<Customer> listOfCust = _repo.GetAllCustomers();

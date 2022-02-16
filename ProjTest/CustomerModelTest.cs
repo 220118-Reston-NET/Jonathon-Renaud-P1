@@ -8,10 +8,11 @@ public class CustomerModelTest
     [Fact]
     public void NameShouldSetValidData()
     {
+            //Arrange - creates any objects we need for the test
             Customer cust = new Customer();
             string validName = "Jonathon Renaud";
 
-            //Act
+            //Act - acting as if we set the value
             cust.Name = validName;
 
             //Assert

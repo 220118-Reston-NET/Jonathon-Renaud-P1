@@ -769,3 +769,211 @@
 2022-02-15 21:55:33.806 -06:00 [INF] Displaying MainMenu to user
 2022-02-15 21:56:20.580 -06:00 [INF] Exiting the application
 2022-02-15 21:56:20.581 -06:00 [INF] Exiting Application
+2022-02-15 22:39:16.289 -06:00 [INF] Navigating to the add a new Customer menu
+2022-02-15 22:39:16.330 -06:00 [INF] Displaying AddCustomer Menu to user
+2022-02-15 22:39:16.468 -06:00 [INF] Invalid input-- going back to addcustomer menu
+2022-02-15 22:39:41.700 -06:00 [INF] Displaying AddCustomer Menu to user
+2022-02-15 22:39:44.945 -06:00 [INF] Customer is being asked for their full name
+2022-02-15 22:39:52.186 -06:00 [INF] Displaying AddCustomer Menu to user
+2022-02-15 22:39:53.723 -06:00 [INF] Customer is being asked for their address
+2022-02-15 22:40:01.759 -06:00 [INF] Displaying AddCustomer Menu to user
+2022-02-15 22:40:03.434 -06:00 [INF] Customer is being asked for their email
+2022-02-15 22:40:12.261 -06:00 [INF] Displaying AddCustomer Menu to user
+2022-02-15 22:40:13.773 -06:00 [INF] Customer is being asked for their phone number
+2022-02-15 22:40:19.749 -06:00 [INF] Displaying AddCustomer Menu to user
+2022-02-15 22:40:24.794 -06:00 [INF] A new customer is being added
+2022-02-15 22:40:25.966 -06:00 [INF] Customer add was a success! -- Going back to MainMenu
+2022-02-15 22:40:25.966 -06:00 [INF] Displaying MainMenu to user
+2022-02-15 22:41:48.184 -06:00 [INF] Navigating back to the customer order menu
+2022-02-15 22:41:48.185 -06:00 [INF] Displaying order menu to user
+2022-02-15 22:41:54.296 -06:00 [INF] User chose to place order: asking for email
+2022-02-15 22:42:16.011 -06:00 [INF] Displaying order menu to user
+2022-02-15 22:42:17.448 -06:00 [INF] User chose to place order: asking for email
+2022-02-15 22:42:20.625 -06:00 [INF] Found the corresponding customer: asking user for store address
+2022-02-15 22:42:43.229 -06:00 [INF] Displayed items at the selected store to customer, asking for next option
+2022-02-15 22:43:10.303 -06:00 [INF] User chose to add an item to cart: asking for product id
+2022-02-15 22:43:13.260 -06:00 [INF] Asking user for amount to purchase
+2022-02-15 22:43:19.314 -06:00 [INF] User chose to add an item to cart: asking for product id
+2022-02-15 22:43:23.665 -06:00 [INF] Asking user for amount to purchase
+2022-02-15 22:43:29.637 -06:00 [WRN] User tried to order more than was available.
+2022-02-15 22:43:37.074 -06:00 [INF] User chose to review cart: displaying cart to user
+2022-02-15 22:43:44.996 -06:00 [INF] User chose to add an item to cart: asking for product id
+2022-02-15 22:43:48.560 -06:00 [INF] Asking user for amount to purchase
+2022-02-15 22:43:54.868 -06:00 [INF] User chose to review cart: displaying cart to user
+2022-02-15 22:44:03.238 -06:00 [INF] User chose to check out: finalizing order
+2022-02-15 22:44:04.105 -06:00 [INF] Order 35 was made successfully
+2022-02-15 22:44:08.972 -06:00 [INF] Displaying order menu to user
+2022-02-15 22:44:13.971 -06:00 [INF] User chose to view previous orders: asking for email.
+2022-02-15 22:44:17.733 -06:00 [INF] Previous orders by email search are displayed to user
+2022-02-15 22:44:27.649 -06:00 [INF] Displaying order menu to user
+2022-02-15 22:44:30.073 -06:00 [INF] User wants to see specific items in an order: asking for order number
+2022-02-15 22:44:37.479 -06:00 [INF] Displaying order menu to user
+2022-02-15 22:44:43.837 -06:00 [INF] User wants to view all store locations
+2022-02-15 22:45:00.266 -06:00 [INF] Displaying order menu to user
+2022-02-15 22:45:02.264 -06:00 [INF] User chose to go back to main menu
+2022-02-15 22:45:02.264 -06:00 [INF] Displaying MainMenu to user
+2022-02-15 22:45:09.115 -06:00 [INF] User has selected Manager menu and will be asked to confirm password
+2022-02-15 22:45:09.115 -06:00 [INF] Asking for manager password from user
+2022-02-15 22:45:16.800 -06:00 [INF] Correct password was entered -- Displaying Manager Menu to user
+2022-02-15 22:45:30.020 -06:00 [INF] Navigating to the search for customer menu
+2022-02-15 22:45:30.020 -06:00 [INF] Displaying SearchCustomer Menu to user
+2022-02-15 22:45:31.884 -06:00 [INF] User has chosen to search for a customer by name
+2022-02-15 22:45:38.333 -06:00 [INF] Displaying SearchCustomer Menu to user
+2022-02-15 22:45:49.806 -06:00 [INF] User has chosen to search for a customer by name
+2022-02-15 22:45:54.452 -06:00 [INF] Displaying SearchCustomer Menu to user
+2022-02-15 22:46:10.533 -06:00 [INF] User has chosen to go to previous menu- Manager Menu
+2022-02-15 22:46:10.533 -06:00 [INF] Displaying Manager Menu to user
+2022-02-15 22:46:11.220 -06:00 [INF] Navigating back to MainMenu
+2022-02-15 22:46:11.220 -06:00 [INF] Displaying MainMenu to user
+2022-02-15 22:46:12.053 -06:00 [INF] Exiting the application
+2022-02-15 22:46:12.053 -06:00 [INF] Exiting Application
+2022-02-15 22:47:01.852 -06:00 [INF] User has selected Manager menu and will be asked to confirm password
+2022-02-15 22:47:01.898 -06:00 [INF] Asking for manager password from user
+2022-02-15 22:47:03.801 -06:00 [INF] Correct password was entered -- Displaying Manager Menu to user
+2022-02-15 22:47:05.760 -06:00 [INF] Navigating to the search for customer menu
+2022-02-15 22:47:05.760 -06:00 [INF] Displaying SearchCustomer Menu to user
+2022-02-15 22:47:09.450 -06:00 [INF] User has chosen to search for a customer by name
+2022-02-15 22:47:13.503 -06:00 [INF] Displaying SearchCustomer Menu to user
+2022-02-15 22:48:05.031 -06:00 [INF] User has chosen to search for a customer by name
+2022-02-15 22:48:10.086 -06:00 [INF] Displaying SearchCustomer Menu to user
+2022-02-15 22:51:04.653 -06:00 [INF] User has chosen to search for a customer by Address
+2022-02-15 22:51:11.060 -06:00 [INF] Displaying SearchCustomer Menu to user
+2022-02-15 22:51:12.138 -06:00 [INF] User has chosen to search for a customer by name
+2022-02-15 22:51:15.633 -06:00 [INF] Displaying SearchCustomer Menu to user
+2022-02-15 22:51:17.394 -06:00 [INF] User has chosen to search for a customer by Phone Number
+2022-02-15 22:51:23.795 -06:00 [INF] Displaying SearchCustomer Menu to user
+2022-02-15 22:51:40.465 -06:00 [INF] User has chosen to search for a customer by Phone Number
+2022-02-15 22:51:44.406 -06:00 [INF] Displaying SearchCustomer Menu to user
+2022-02-15 22:51:45.828 -06:00 [INF] User has chosen to search for a customer by email 
+2022-02-15 22:54:06.466 -06:00 [INF] Displaying SearchCustomer Menu to user
+2022-02-15 22:54:09.025 -06:00 [INF] User has chosen to go to previous menu- Manager Menu
+2022-02-15 22:54:09.026 -06:00 [INF] Displaying Manager Menu to user
+2022-02-15 22:54:12.368 -06:00 [INF] Navigating back to MainMenu
+2022-02-15 22:54:12.368 -06:00 [INF] Displaying MainMenu to user
+2022-02-15 22:54:13.464 -06:00 [INF] Exiting the application
+2022-02-15 22:54:13.464 -06:00 [INF] Exiting Application
+2022-02-15 22:59:15.639 -06:00 [INF] User has selected Manager menu and will be asked to confirm password
+2022-02-15 22:59:15.686 -06:00 [INF] Asking for manager password from user
+2022-02-15 22:59:17.834 -06:00 [INF] Correct password was entered -- Displaying Manager Menu to user
+2022-02-15 22:59:20.949 -06:00 [INF] Navigating to the search for customer menu
+2022-02-15 22:59:20.949 -06:00 [INF] Displaying SearchCustomer Menu to user
+2022-02-15 22:59:21.666 -06:00 [INF] User has chosen to search for a customer by name
+2022-02-15 22:59:25.245 -06:00 [INF] Displaying SearchCustomer Menu to user
+2022-02-15 22:59:27.015 -06:00 [INF] User has chosen to search for a customer by name
+2022-02-15 23:00:02.528 -06:00 [INF] Displaying SearchCustomer Menu to user
+2022-02-15 23:00:04.003 -06:00 [WRN] User has provided an invalid input - going to current menu - search customer
+2022-02-15 23:00:04.846 -06:00 [INF] Displaying SearchCustomer Menu to user
+2022-02-15 23:00:05.889 -06:00 [INF] User has chosen to go to previous menu- Manager Menu
+2022-02-15 23:00:05.889 -06:00 [INF] Displaying Manager Menu to user
+2022-02-15 23:00:10.960 -06:00 [INF] An invalid input was received. Navigating back to this menu
+2022-02-15 23:00:11.474 -06:00 [INF] Displaying Manager Menu to user
+2022-02-15 23:00:12.065 -06:00 [INF] Navigating back to MainMenu
+2022-02-15 23:00:12.065 -06:00 [INF] Displaying MainMenu to user
+2022-02-15 23:00:12.888 -06:00 [INF] Exiting the application
+2022-02-15 23:00:12.888 -06:00 [INF] Exiting Application
+2022-02-15 23:00:22.969 -06:00 [INF] User has selected Manager menu and will be asked to confirm password
+2022-02-15 23:00:23.018 -06:00 [INF] Asking for manager password from user
+2022-02-15 23:00:24.751 -06:00 [INF] Correct password was entered -- Displaying Manager Menu to user
+2022-02-15 23:00:25.862 -06:00 [INF] Navigating to the search for customer menu
+2022-02-15 23:00:25.862 -06:00 [INF] Displaying SearchCustomer Menu to user
+2022-02-15 23:00:26.536 -06:00 [INF] User has chosen to search for a customer by name
+2022-02-15 23:00:28.513 -06:00 [WRN] User tried to enter a name that didn't correspond to a customer.
+2022-02-15 23:00:31.252 -06:00 [INF] Displaying SearchCustomer Menu to user
+2022-02-15 23:00:40.196 -06:00 [INF] User has chosen to search for a customer by name
+2022-02-15 23:01:53.179 -06:00 [INF] Displaying SearchCustomer Menu to user
+2022-02-15 23:01:54.273 -06:00 [INF] User has chosen to go to previous menu- Manager Menu
+2022-02-15 23:01:54.274 -06:00 [INF] Displaying Manager Menu to user
+2022-02-15 23:01:55.299 -06:00 [INF] Navigating back to MainMenu
+2022-02-15 23:01:55.299 -06:00 [INF] Displaying MainMenu to user
+2022-02-15 23:01:55.661 -06:00 [INF] Exiting the application
+2022-02-15 23:01:55.662 -06:00 [INF] Exiting Application
+2022-02-15 23:02:06.570 -06:00 [INF] User has selected Manager menu and will be asked to confirm password
+2022-02-15 23:02:06.612 -06:00 [INF] Asking for manager password from user
+2022-02-15 23:02:08.076 -06:00 [INF] Correct password was entered -- Displaying Manager Menu to user
+2022-02-15 23:02:08.999 -06:00 [INF] Navigating to the search for customer menu
+2022-02-15 23:02:08.999 -06:00 [INF] Displaying SearchCustomer Menu to user
+2022-02-15 23:02:09.460 -06:00 [INF] User has chosen to search for a customer by name
+2022-02-15 23:02:12.204 -06:00 [WRN] User tried to enter a name that didn't correspond to a customer.
+2022-02-15 23:02:13.563 -06:00 [INF] Displaying SearchCustomer Menu to user
+2022-02-15 23:07:05.729 -06:00 [INF] User has chosen to go to previous menu- Manager Menu
+2022-02-15 23:07:05.729 -06:00 [INF] Displaying Manager Menu to user
+2022-02-15 23:07:06.381 -06:00 [INF] Navigating back to MainMenu
+2022-02-15 23:07:06.382 -06:00 [INF] Displaying MainMenu to user
+2022-02-15 23:07:07.060 -06:00 [INF] Exiting the application
+2022-02-15 23:07:07.060 -06:00 [INF] Exiting Application
+2022-02-15 23:07:17.062 -06:00 [INF] User has selected Manager menu and will be asked to confirm password
+2022-02-15 23:07:17.110 -06:00 [INF] Asking for manager password from user
+2022-02-15 23:07:18.752 -06:00 [INF] Correct password was entered -- Displaying Manager Menu to user
+2022-02-15 23:07:19.950 -06:00 [INF] Navigating to the search for customer menu
+2022-02-15 23:07:19.950 -06:00 [INF] Displaying SearchCustomer Menu to user
+2022-02-15 23:07:20.377 -06:00 [INF] User has chosen to search for a customer by name
+2022-02-15 23:07:22.330 -06:00 [WRN] User tried to enter a name that didn't correspond to a customer.
+2022-02-15 23:07:23.802 -06:00 [INF] Displaying SearchCustomer Menu to user
+2022-02-15 23:07:25.383 -06:00 [INF] User has chosen to search for a customer by Address
+2022-02-15 23:07:32.340 -06:00 [WRN] User tried to enter an address that didn't correspond to a customer.
+2022-02-15 23:07:33.466 -06:00 [INF] Displaying SearchCustomer Menu to user
+2022-02-15 23:07:34.982 -06:00 [INF] User has chosen to search for a customer by Address
+2022-02-15 23:07:37.701 -06:00 [INF] Displaying SearchCustomer Menu to user
+2022-02-15 23:07:39.992 -06:00 [INF] User has chosen to search for a customer by Phone Number
+2022-02-15 23:07:44.024 -06:00 [WRN] User tried to enter a phone number that didn't correspond to a customer.
+2022-02-15 23:07:45.022 -06:00 [INF] Displaying SearchCustomer Menu to user
+2022-02-15 23:07:46.414 -06:00 [INF] User has chosen to search for a customer by Phone Number
+2022-02-15 23:07:48.698 -06:00 [INF] Displaying SearchCustomer Menu to user
+2022-02-15 23:07:50.790 -06:00 [INF] User has chosen to search for a customer by email 
+2022-02-15 23:07:54.388 -06:00 [WRN] User tried to enter an email that didn't correspond to a customer.
+2022-02-15 23:07:55.472 -06:00 [INF] Displaying SearchCustomer Menu to user
+2022-02-15 23:07:57.129 -06:00 [INF] User has chosen to search for a customer by email 
+2022-02-15 23:08:02.239 -06:00 [INF] Displaying SearchCustomer Menu to user
+2022-02-15 23:08:03.723 -06:00 [INF] User has chosen to go to previous menu- Manager Menu
+2022-02-15 23:08:03.723 -06:00 [INF] Displaying Manager Menu to user
+2022-02-15 23:08:05.648 -06:00 [INF] Navigating to the order history menu
+2022-02-15 23:08:05.648 -06:00 [INF] Displaying view order history menu to user
+2022-02-15 23:08:07.012 -06:00 [INF] User has chosen to search for orders by email
+2022-02-15 23:08:09.240 -06:00 [WRN] User was unable to search for orders by email
+2022-02-15 23:08:10.719 -06:00 [INF] Displaying view order history menu to user
+2022-02-15 23:08:12.275 -06:00 [INF] User has chosen to search for orders by email
+2022-02-15 23:08:21.004 -06:00 [INF] Displaying view order history menu to user
+2022-02-15 23:08:23.944 -06:00 [INF] User has chosen to search for orders by store address 
+2022-02-15 23:08:43.789 -06:00 [INF] Displaying view order history menu to user
+2022-02-15 23:08:46.296 -06:00 [INF] User has chosen to search for orders by store address 
+2022-02-15 23:08:47.164 -06:00 [WRN] User was unable to search for orders by store address
+2022-02-15 23:08:48.505 -06:00 [INF] Displaying view order history menu to user
+2022-02-15 23:08:51.988 -06:00 [INF] User has chosen to search for orders by store address 
+2022-02-15 23:08:52.737 -06:00 [WRN] User was unable to search for orders by store address
+2022-02-15 23:08:57.705 -06:00 [INF] Displaying view order history menu to user
+2022-02-15 23:08:59.368 -06:00 [INF] User has chosen to view items in an order by order id
+2022-02-15 23:09:04.174 -06:00 [INF] Displaying view order history menu to user
+2022-02-15 23:09:07.736 -06:00 [INF] User has chosen to go to previous menu - Manager Menu
+2022-02-15 23:09:07.736 -06:00 [INF] Displaying Manager Menu to user
+2022-02-15 23:09:12.209 -06:00 [INF] Navigating to the inventory control menu
+2022-02-15 23:09:12.210 -06:00 [INF] Displaying Replenish Inventory Menu to user
+2022-02-15 23:09:13.739 -06:00 [INF] User has chosen to view inventory at a specific store and is being asked for store address.
+2022-02-15 23:09:14.675 -06:00 [INF] User is viewing product inventory at a specific store
+2022-02-15 23:09:22.827 -06:00 [INF] Displaying Replenish Inventory Menu to user
+2022-02-15 23:09:25.013 -06:00 [INF] User wants to update/replenish inventory and is being asked for store address
+2022-02-15 23:09:26.626 -06:00 [INF] Store was successfully found, items are being displayed to user and user is being asked which product to replenish
+2022-02-15 23:09:32.917 -06:00 [INF] User has updated inventory successfully.
+2022-02-15 23:09:32.917 -06:00 [INF] Displaying Replenish Inventory Menu to user
+2022-02-15 23:09:35.281 -06:00 [INF] User has chosen to view inventory at a specific store and is being asked for store address.
+2022-02-15 23:09:36.704 -06:00 [INF] User is viewing product inventory at a specific store
+2022-02-15 23:09:43.475 -06:00 [INF] Displaying Replenish Inventory Menu to user
+2022-02-15 23:09:44.875 -06:00 [INF] User wants to update/replenish inventory and is being asked for store address
+2022-02-15 23:09:46.259 -06:00 [INF] Store was successfully found, items are being displayed to user and user is being asked which product to replenish
+2022-02-15 23:09:48.193 -06:00 [INF] User has updated inventory successfully.
+2022-02-15 23:09:48.193 -06:00 [INF] Displaying Replenish Inventory Menu to user
+2022-02-15 23:09:50.793 -06:00 [INF] User wants to update/replenish inventory and is being asked for store address
+2022-02-15 23:09:51.993 -06:00 [INF] Store was successfully found, items are being displayed to user and user is being asked which product to replenish
+2022-02-15 23:10:07.888 -06:00 [INF] User has updated inventory successfully.
+2022-02-15 23:10:07.888 -06:00 [INF] Displaying Replenish Inventory Menu to user
+2022-02-15 23:10:09.753 -06:00 [INF] User has chosen to view inventory at a specific store and is being asked for store address.
+2022-02-15 23:10:11.163 -06:00 [INF] User is viewing product inventory at a specific store
+2022-02-15 23:10:19.365 -06:00 [INF] Displaying Replenish Inventory Menu to user
+2022-02-15 23:10:23.040 -06:00 [INF] User has chosen to view inventory at a specific store and is being asked for store address.
+2022-02-15 23:10:23.933 -06:00 [INF] User is viewing product inventory at a specific store
+2022-02-15 23:10:28.682 -06:00 [INF] Displaying Replenish Inventory Menu to user
+2022-02-15 23:10:32.360 -06:00 [INF] User wants to view all store locations
+2022-02-15 23:10:33.795 -06:00 [INF] Displaying Manager Menu to user
+2022-02-15 23:10:35.272 -06:00 [INF] Navigating back to MainMenu
+2022-02-15 23:10:35.273 -06:00 [INF] Displaying MainMenu to user
+2022-02-15 23:10:36.562 -06:00 [INF] Exiting the application
+2022-02-15 23:10:36.562 -06:00 [INF] Exiting Application
