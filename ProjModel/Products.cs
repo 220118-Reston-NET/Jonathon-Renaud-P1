@@ -12,6 +12,14 @@ namespace ProjModel
             get { return _price; }
             set { _price = value; }
         }
+
+        private string _storeFront;
+        public string StoreFront
+        {
+            get { return _storeFront; }
+            set { _storeFront = value; }
+        }
+        
         
         public string Description { get; set; }
 

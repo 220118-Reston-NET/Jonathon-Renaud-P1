@@ -4,6 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using ProjBL;
+using ProjDL;
+using ProjModel;
 
 namespace ProjAPI.Controllers
 {
@@ -11,36 +14,131 @@ namespace ProjAPI.Controllers
     [ApiController]
     public class StoreController : ControllerBase
     {
-        // GET: api/Store
-        [HttpGet]
-        public IEnumerable<string> Get()
+
+        private ICustomerBL _customerBL;
+        private StoreBL _storeBL;
+
+        public StoreController(ICustomerBL p_customerBL, IStoreBL p_storeBL)
         {
-            return new string[] { "value1", "value2" };
+            _customerBL = p_customerBL;
+            _storeBL = (StoreBL)p_storeBL;
+
         }
 
-        // GET: api/Store/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        // GET: api/Store/customer/getall ---retrieves all customers in db but not their orders
+        [HttpGet("customer/getall")]
+        public IActionResult GetAllCustomers()
         {
-            return "value";
+            return Ok(_customerBL.GetAllCustomers());
         }
 
-        // POST: api/Store
-        [HttpPost]
-        public void Post([FromBody] string value)
+        // GET: api/Store/customer/email  ?email=   ---search by email
+        [HttpGet("customer/email")]
+        public IActionResult GetCustomerByEmail([FromQuery] string email)
         {
+            return Ok(_customerBL.SearchCustomerByEmail(email));
         }
 
-        // PUT: api/Store/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        //GET: api/Store/customer/email/orders  --- get all orders associated with a customer
+        [HttpGet("customer/email/orders")]
+        public IActionResult GetCustomerOrders([FromQuery] string email)
         {
+            return Ok(_storeBL.GetOrdersByCustomerEmail(email));
         }
 
-        // DELETE: api/Store/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+         //GET: api/Store/customer/email/orders/{sortby}  --- get all orders associated with a customer and sort by some parameter
+        [HttpGet("customer/email/orders/{sortby}")]
+        public IActionResult GetCustomerOrdersAndSort([FromQuery] string email, string sortby)
         {
+            try
+            {
+                 if (sortby == "new")
+            {
+            return Ok(_storeBL.GetOrdersByCustomerEmail(email).OrderByDescending(p => p.OrderID));
+            }
+            else if (sortby == "old")
+            {
+            return Ok(_storeBL.GetOrdersByCustomerEmail(email).OrderBy(p => p.OrderID));
+            }
+            else if (sortby == "highprice")
+            {
+            return Ok(_storeBL.GetOrdersByCustomerEmail(email).OrderByDescending(p => p.TotalPrice));
+            }
+            else if (sortby == "lowprice")
+            {
+            return Ok(_storeBL.GetOrdersByCustomerEmail(email).OrderBy(p => p.TotalPrice));
+            }
+            else {
+                return NotFound("Please input keywords: 'new' | 'old' | 'highprice' | 'lowprice'");
+            }
+            }
+            catch (System.Exception)
+            {
+                
+                throw;
+            }
+           
         }
+
+        //GET: api/Store/address/orders/{sortby}  --- get all orders associated with a store and sort it by some criteria
+        [HttpGet("address/orders/{sortby}")]
+        public IActionResult GetStoreOrders([FromQuery] string address, string sortby)
+        {
+            try
+            {
+                 if (sortby == "new")
+            {
+            return Ok(_storeBL.GetOrdersByStoreAddress(address).OrderByDescending(p => p.OrderID));
+            }
+            else if (sortby == "old")
+            {
+            return Ok(_storeBL.GetOrdersByStoreAddress(address).OrderBy(p => p.OrderID));
+            }
+            else if (sortby == "highprice")
+            {
+            return Ok(_storeBL.GetOrdersByStoreAddress(address).OrderByDescending(p => p.TotalPrice));
+            }
+            else if (sortby == "lowprice")
+            {
+            return Ok(_storeBL.GetOrdersByStoreAddress(address).OrderBy(p => p.TotalPrice));
+            }
+            else {
+                return NotFound("Please input keywords: 'new' | 'old' | 'highprice' | 'lowprice'");
+            }
+            }
+            catch (System.Exception)
+            {
+                
+                throw;
+            }
+        }
+
+        //GET: api/Store/customer/orderdetail  --- get order details by order id
+        [HttpGet("customer/email/orderdetail")]
+        public IActionResult GetCustomerOrderDetails([FromQuery] int orderID)
+        {
+            return Ok(_storeBL.GetProductsInOrder(orderID));
+        }
+
+        //GET: api/Store/customer/orderdetail  --- get order details for a customer or 
+        // [HttpPost("customer/createorder")]
+        // public IActionResult CreateOrder(Orders p_order)
+        // {
+        //     _storeBL.InitializeOrder(p_order);            
+        //     return Ok(_storeBL.MakeOrder(LineItems p_lineItems, int quantity, int p_storeID));
+        // }
+
+
+        
+        // POST: api/Store/customer/add   --- adds a new customer from a json body
+        [HttpPost("customer/add")]
+        public IActionResult Post([FromBody] Customer p_customer)
+        {
+            return Created("Successfully added", _customerBL.AddCustomer(p_customer));
+        }
+
+
+
+        
     }
 }

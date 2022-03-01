@@ -27,7 +27,13 @@ namespace ProjBL
             return _repo.AddCustomer(p_customer);
         }
 
-        
+        public List<Customer> GetAllCustomers()
+        {
+            List<Customer> listOfCust = _repo.GetAllCustomers();                                  
+            
+            return listOfCust;
+        }
+
         public List<Customer> SearchCustomerByName(string p_name)
         {
             List<Customer> listOfCust = _repo.GetAllCustomers();

@@ -27,6 +27,7 @@ namespace ProjBL
                         return listOfOrders
                                 .Where(customer => customer.CustomerID.Equals(found.CustID))
                                 .ToList();
+                        
                     }
                     else
                     {
@@ -124,5 +125,7 @@ namespace ProjBL
         {
             return _repo.GetStoreFronts();
         }
+
+        
     }
 }

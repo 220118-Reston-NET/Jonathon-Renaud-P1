@@ -256,7 +256,7 @@ namespace ProjDL
                     {
 
                         OrderID = reader.GetInt32(0),
-                        TotalPrice = reader.GetDouble(1),
+                        TotalPrice = Math.Round(reader.GetDouble(1),2),
                         CustomerID = reader.GetInt32(2)
 
                     });
@@ -346,7 +346,7 @@ namespace ProjDL
                     {
                         ProdID = reader.GetInt32(0),
                         Name = reader.GetString(1),
-                        Price = reader.GetDouble(2),
+                        Price = Math.Round(reader.GetDouble(2),2),
                         Description = reader.GetString(3),
                         Quantity = reader.GetInt32(4)
                     });
@@ -358,13 +358,66 @@ namespace ProjDL
             return listOfProducts;
         }
 
+        public List<Products> GetLineItemDetails(int orderID)
+        {
+            List<Products> listOfProducts = new List<Products>();
+
+            string sqlQuery = @"select p.prodName, li.quantity, p.prodPrice, p.prodID, p.prodDesc, sf.storeName from LineItems li 
+                                inner join Product p on p.prodID = li.productID
+                                inner join Orders o on o.ordersID = li.ordersID 
+                                inner join storeFront_orders sfo on sfo.ordersID = o.ordersID
+                                inner join storeFront sf on sfo.storeID = sf.storeID  
+                                WHERE li.ordersID = @ordersID";
+
+            using (SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+
+                con.Open();
+
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                command.Parameters.AddWithValue("@ordersID", orderID);
+
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+
+                    listOfProducts.Add(new Products()
+                    {
+
+                        Name = reader.GetString(0),
+                        Quantity = reader.GetInt32(1),
+                        Price = Math.Round(reader.GetDouble(2),2),
+                        ProdID = reader.GetInt32(3),
+                        Description = reader.GetString(4),
+                        StoreFront = reader.GetString(5)
+                        
+
+                         
+
+                    });
+
+                    
+
+                }
+
+            }
+
+            return listOfProducts;
+        }
+
+
             public List<Orders> GetAllOrdersByCustomer(int p_custID)
         {
             List<Orders> listOfOrders = new List<Orders>();
 
             string sqlQuery = @"select * from Orders o 
                                 inner join storeFront_orders sfo on o.ordersID = sfo.ordersID
-                                where o.custID = @custID;";
+                                inner join StoreFront sf on sf.storeID = sfo.storeID 
+                                 where o.custID = @custID";
+                                                  
+                                
                                 // inner join LineItems li on o.ordersID = li.ordersID
                                 // inner join Product p on li.productID = p.prodID
 
@@ -386,9 +439,11 @@ namespace ProjDL
                     {
 
                         OrderID = reader.GetInt32(0),
-                        TotalPrice = reader.GetDouble(1),
+                        TotalPrice = Math.Round(reader.GetDouble(1),2),
                         CustomerID = reader.GetInt32(2),
-                        StoreID = reader.GetInt32(3)
+                        StoreID = reader.GetInt32(3),
+                        StoreFront = reader.GetString(6),
+                        LineItems = GetLineItemDetails(reader.GetInt32(0))
 
                     });
 
@@ -405,6 +460,7 @@ namespace ProjDL
 
             string sqlQuery = @"select * from Orders o 
                                 inner join storeFront_orders sfo on o.ordersID = sfo.ordersID
+                                inner join storeFront sf on sfo.storeID = sf.storeID
                                 where sfo.storeID = @storeID;";
                                 // inner join LineItems li on o.ordersID = li.ordersID
                                 // inner join Product p on li.productID = p.prodID
@@ -427,9 +483,11 @@ namespace ProjDL
                     {
 
                         OrderID = reader.GetInt32(0),
-                        TotalPrice = reader.GetDouble(1),
+                        TotalPrice = Math.Round(reader.GetDouble(1),2),
                         CustomerID = reader.GetInt32(2),
-                        StoreID = reader.GetInt32(3)
+                        StoreID = reader.GetInt32(3),
+                        LineItems = GetLineItemDetails(reader.GetInt32(0)),
+                        StoreFront = reader.GetString(7)
                          
 
                     });
@@ -443,49 +501,7 @@ namespace ProjDL
             return listOfOrders;
         }
 
-        public List<Products> GetLineItemDetails(int orderID)
-        {
-            List<Products> listOfProducts = new List<Products>();
 
-            string sqlQuery = @"select p.prodName, li.quantity, p.prodPrice, p.prodID from LineItems li 
-                                inner join Product p on p.prodID = li.productID
-                                inner join Orders o on o.ordersID = li.ordersID 
-                                inner join storeFront_orders sfo on sfo.ordersID = o.ordersID  
-                                WHERE li.ordersID = @ordersID";
-
-            using (SqlConnection con = new SqlConnection(_connectionStrings))
-            {
-
-                con.Open();
-
-                SqlCommand command = new SqlCommand(sqlQuery, con);
-                command.Parameters.AddWithValue("@ordersID", orderID);
-
-
-                SqlDataReader reader = command.ExecuteReader();
-
-                while (reader.Read())
-                {
-
-                    listOfProducts.Add(new Products()
-                    {
-
-                        Name = reader.GetString(0),
-                        Quantity = reader.GetInt32(1),
-                        Price = reader.GetDouble(2),
-                        ProdID = reader.GetInt32(3)
-                         
-
-                    });
-
-                    
-
-                }
-
-            }
-
-            return listOfProducts;
-        }
 
         public Boolean StoreQuantityIsLessThanOrdered(int choiceID, int itemOrdered, int storeID)
         {

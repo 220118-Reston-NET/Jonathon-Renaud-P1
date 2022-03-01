@@ -204,7 +204,7 @@ namespace ProjUI
                                     _newOrder.CustomerID = listOfCustomers[0].CustID;
                                     _newOrder.StoreID = listOfStores2[0].StoreID;
                                     _newOrder.TotalPrice = totalSpent;
-                                    _newOrder.LineItems = itemsInCart;
+                                    // _newOrder.LineItems = itemsInCart;
                                     
                                     _storeBL.InitializeOrder(_newOrder);
 

@@ -3,8 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjUI", "ProjUI\ProjUI.csproj", "{5F4ADE3D-1AFA-4FAF-A05A-3136AE848DC6}"
-EndProject
+
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjModel", "ProjModel\ProjModel.csproj", "{231436AB-51BC-45D7-9484-2F9175708A9F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjDL", "ProjDL\ProjDL.csproj", "{7E2D1438-7888-404A-8E12-1C82B6F8D6D1}"

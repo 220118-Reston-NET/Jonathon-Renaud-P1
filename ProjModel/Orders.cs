@@ -2,11 +2,52 @@ namespace ProjModel
 {
     public class Orders
     {
-        public int OrderID;
-        public int CustomerID;
-        public int StoreID;
-        public List<LineItems> LineItems { get; set; }
-        public string StoreFront { get; set; }
+        private int _orderID;
+
+        public int OrderID
+        {
+            get { return _orderID; }
+            set { _orderID = value; }
+        }
+        
+        
+        private int _customerID;
+        public int CustomerID
+        {
+            get { return _customerID; }
+            set { _customerID = value; }
+        }
+        
+        private int _storeID;
+        public int StoreID
+        {
+            get { return _storeID; }
+            set { _storeID = value; }
+        }
+        
+
+        // private List<LineItems> _LineItems;
+
+        // public List<LineItems> LineItems 
+        // {
+        //     get { return _LineItems; }
+        //     set { _LineItems = value; }
+        // }
+
+        private List<Products> _LineItems;
+        public List<Products> LineItems
+        {
+            get { return _LineItems; }
+            set { _LineItems = value; }
+        }
+        
+        private string _storeFront;
+        public string StoreFront
+        {
+            get { return _storeFront; }
+            set { _storeFront = value; }
+        }
+        
         private double _totalPrice;
         public double TotalPrice
         {

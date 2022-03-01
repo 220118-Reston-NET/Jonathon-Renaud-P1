@@ -28,5 +28,7 @@ public interface ICustomerBL
     List<Customer> SearchCustomerByPhoneNumber(string p_phoneNumber);
     List<Customer> SearchCustomerByEmail(string p_email);
 
+    List<Customer> GetAllCustomers();
+
     }
 }
