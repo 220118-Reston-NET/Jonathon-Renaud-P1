@@ -15,8 +15,8 @@ namespace ProjAPI.Controllers
     public class StoreController : ControllerBase
     {
 
-        private ICustomerBL _customerBL;
-        private StoreBL _storeBL;
+        private readonly ICustomerBL _customerBL;
+        private readonly StoreBL _storeBL;
 
         public StoreController(ICustomerBL p_customerBL, IStoreBL p_storeBL)
         {
