@@ -324,7 +324,7 @@ namespace ProjDL
         {
             List<Products> listOfProducts = new List<Products>();
 
-            string sqlQuery = @"select p.prodID, p.prodName, p.prodPrice, p.prodDesc, sp.quantity from Product p
+            string sqlQuery = @"select p.prodID, p.prodName, p.prodPrice, p.prodDesc, sp.quantity, s.storeName from Product p
                             inner join storeFront_product sp on sp.prodID = p.prodID 
                             inner join StoreFront s on s.storeID = sp.storeID
                             where s.storeAddress = @storeAddress";
@@ -348,7 +348,13 @@ namespace ProjDL
                         Name = reader.GetString(1),
                         Price = Math.Round(reader.GetDouble(2),2),
                         Description = reader.GetString(3),
-                        Quantity = reader.GetInt32(4)
+                        Quantity = reader.GetInt32(4),
+                        StoreFront = reader.GetString(5)
+
+                        
+
+                        
+
                     });
 
                 }

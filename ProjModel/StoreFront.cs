@@ -12,13 +12,13 @@ namespace ProjModel
             get { return _products; }
             set { _products = value; }
         }
-        private List<Orders> _orders;
+        // private List<Orders> _orders;
 
-        public List<Orders> Orders
-        {
-            get {return _orders;}
-            set { _orders = value; }
-        }
+        // public List<Orders> Orders
+        // {
+        //     get {return _orders;}
+        //     set { _orders = value; }
+        // }
         
 
         public override string ToString()

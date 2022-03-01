@@ -128,6 +128,14 @@ namespace ProjAPI.Controllers
         //     return Ok(_storeBL.MakeOrder(LineItems p_lineItems, int quantity, int p_storeID));
         // }
 
+        //GET: api/Store/address/inventory  --- view all inventory at a location
+        [HttpGet("address/inventory")]
+        public IActionResult GetInventoryAtAStore([FromQuery] string address)
+        {
+            return Ok(_storeBL.GetProductsByStore(address));
+        }
+
+
 
         
         // POST: api/Store/customer/add   --- adds a new customer from a json body
@@ -137,7 +145,23 @@ namespace ProjAPI.Controllers
             return Created("Successfully added", _customerBL.AddCustomer(p_customer));
         }
 
-
+        // PUT: api/Store/address/updateinv
+        [HttpPut("address/updateinv")]
+        public void UpdateInventoryAtAStore([FromQuery] int productID, int amountToAdd, string address)
+        {
+           try
+           {
+               List<StoreFront> listOfStores = _storeBL.SearchStoreByAddress(address);
+               int storeID = listOfStores[0].StoreID;
+               _storeBL.UpdateInventory(productID, amountToAdd, storeID);
+           }
+           catch (System.Exception)
+           {
+               
+               throw;
+           }
+           
+        }
 
         
     }
