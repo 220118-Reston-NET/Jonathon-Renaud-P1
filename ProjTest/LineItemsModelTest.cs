@@ -16,7 +16,6 @@ public class LineItemsModelTest
             lineItems.ProductQuantity = validQuantity;
 
             //Assert
-            Assert.NotNull(lineItems.ProductQuantity); //checks that the property is not null meaning we did set data in this property
             Assert.Equal(validQuantity, lineItems.ProductQuantity); //checks if the property does indeed hold the same value as what we set it as
         }
 
@@ -30,8 +29,9 @@ public class LineItemsModelTest
             lineItems.ProductID = validProductID;
 
             //Assert
-            Assert.NotNull(lineItems.ProductID); //checks that the property is not null meaning we did set data in this property
             Assert.Equal(validProductID, lineItems.ProductID); //checks if the property does indeed hold the same value as what we set it as
         }
+
+    
 
 }

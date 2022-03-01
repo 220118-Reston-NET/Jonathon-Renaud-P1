@@ -43,8 +43,8 @@ public class StoreFrontModelTest
             storeFront.StoreID = validStoreID;
 
             //Assert
-            Assert.NotNull(storeFront.StoreID); //checks that the property is not null meaning we did set data in this property
             Assert.Equal(validStoreID, storeFront.StoreID); //checks if the property does indeed hold the same value as what we set it as
         }
-  
+    
+   
 }

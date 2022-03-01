@@ -17,7 +17,6 @@ public class ProductsModelTest
             Product.ProdID = validProdID;
 
             //Assert
-            Assert.NotNull(Product.ProdID); //checks that the property is not null meaning we did set data in this property
             Assert.Equal(validProdID, Product.ProdID); //checks if the property does indeed hold the same value as what we set it as
         }  
 
@@ -45,7 +44,6 @@ public class ProductsModelTest
             prod.Price = validPrice;
 
             //Assert
-            Assert.NotNull(prod.Price); //checks that the property is not null meaning we did set data in this property
             Assert.Equal(validPrice, prod.Price); //checks if the property does indeed hold the same value as what we set it as
         }
 
@@ -74,7 +72,6 @@ public class ProductsModelTest
             Product.Quantity = validQuantity;
 
             //Assert
-            Assert.NotNull(Product.Quantity); //checks that the property is not null meaning we did set data in this property
             Assert.Equal(validQuantity, Product.Quantity); //checks if the property does indeed hold the same value as what we set it as
         }  
 

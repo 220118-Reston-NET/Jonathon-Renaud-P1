@@ -30,7 +30,6 @@ public class OrdersModelTest
             orders.TotalPrice = validTotalPrice;
 
             //Assert
-            Assert.NotNull(orders.TotalPrice); //checks that the property is not null meaning we did set data in this property
             Assert.Equal(validTotalPrice, orders.TotalPrice); //checks if the property does indeed hold the same value as what we set it as
         }
 
@@ -44,7 +43,6 @@ public class OrdersModelTest
             orders.StoreID = validStoreID;
 
             //Assert
-            Assert.NotNull(orders.StoreID); //checks that the property is not null meaning we did set data in this property
             Assert.Equal(validStoreID, orders.StoreID); //checks if the property does indeed hold the same value as what we set it as
         }
 
@@ -59,10 +57,9 @@ public class OrdersModelTest
             orders.OrderID = validOrderID;
 
             //Assert
-            Assert.NotNull(orders.OrderID); //checks that the property is not null meaning we did set data in this property
             Assert.Equal(validOrderID, orders.OrderID); //checks if the property does indeed hold the same value as what we set it as
         }  
-             
+
 [Fact]
     
     public void CustomerIDShouldSetValidData()
@@ -74,7 +71,6 @@ public class OrdersModelTest
             orders.CustomerID = validCustomerID;
 
             //Assert
-            Assert.NotNull(orders.CustomerID); //checks that the property is not null meaning we did set data in this property
             Assert.Equal(validCustomerID, orders.CustomerID); //checks if the property does indeed hold the same value as what we set it as
         }  
 }

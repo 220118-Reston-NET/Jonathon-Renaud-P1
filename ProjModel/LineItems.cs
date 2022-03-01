@@ -10,10 +10,7 @@ namespace ProjModel
             set { _productQuantity = value; }
         }
 
-         public override string ToString()
-        {
-            return $"========================\nID: {ProductID}\nQuantity: {ProductQuantity}\n";
-        }
+        
         
     }
 }

@@ -12,25 +12,9 @@ namespace ProjModel
             get { return _products; }
             set { _products = value; }
         }
-        // private List<Orders> _orders;
-
-        // public List<Orders> Orders
-        // {
-        //     get {return _orders;}
-        //     set { _orders = value; }
-        // }
+        
         
 
-        public override string ToString()
-        {   
-            string items = "=================\n";
-            foreach(Products item in _products)
-            {  
-                items +=  item + "\n=================\n";
-            }
-
-            return items;
-                
-        }
+       
     }
 }
