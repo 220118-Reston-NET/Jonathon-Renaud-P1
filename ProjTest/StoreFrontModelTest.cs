@@ -32,5 +32,19 @@ public class StoreFrontModelTest
             Assert.NotNull(storeFront.Address); //checks that the property is not null meaning we did set data in this property
             Assert.Equal(validAddress, storeFront.Address); //checks if the property does indeed hold the same value as what we set it as
         }
+
+    [Fact]
+    public void StoreIDShouldSetValidData()
+    {
+            StoreFront storeFront = new StoreFront();
+            int validStoreID = 21;
+
+            //Act
+            storeFront.StoreID = validStoreID;
+
+            //Assert
+            Assert.NotNull(storeFront.StoreID); //checks that the property is not null meaning we did set data in this property
+            Assert.Equal(validStoreID, storeFront.StoreID); //checks if the property does indeed hold the same value as what we set it as
+        }
   
 }

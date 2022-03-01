@@ -61,4 +61,17 @@ public class CustomerModelTest
             Assert.NotNull(cust.PhoneNumber); //checks that the property is not null meaning we did set data in this property
             Assert.Equal(validPhoneNumber, cust.PhoneNumber); //checks if the property does indeed hold the same value as what we set it as
         }        
+    [Fact]
+    public void CustIDShouldSetValidData()
+    {
+            Customer cust = new Customer();
+            int validCustID = 55;
+
+            //Act
+            cust.CustID = validCustID;
+
+            //Assert
+            Assert.NotNull(cust.CustID); //checks that the property is not null meaning we did set data in this property
+            Assert.Equal(validCustID, cust.CustID); //checks if the property does indeed hold the same value as what we set it as
+        }  
 }
