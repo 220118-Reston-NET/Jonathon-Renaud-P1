@@ -547,6 +547,38 @@ namespace ProjDL
             
             
         }
+
+
+        public List<Employee> GetAllEmployees()
+        {
+            List<Employee> listOfEmployee = new List<Employee>();
+
+            string sqlQuery = @"select * from EmployeeUsers";
+
+            using (SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+                con.Open();
+
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                while(reader.Read())
+                {
+                    listOfEmployee.Add(new Employee(){
+                        EmployeeID = reader.GetInt32(0),
+                        Name = reader.GetString(1),
+                        Email = reader.GetString(2),
+                        Password = reader.GetString(3),
+                        IsAdmin = reader.GetBoolean(4)
+                        
+                    });
+                }
+
+
+            }
+            return listOfEmployee;
+        }
     }
 
 }

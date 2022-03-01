@@ -147,13 +147,16 @@ namespace ProjAPI.Controllers
 
         // PUT: api/Store/address/updateinv
         [HttpPut("address/updateinv")]
-        public void UpdateInventoryAtAStore([FromQuery] int productID, int amountToAdd, string address)
+        public void UpdateInventoryAtAStore([FromQuery] int productID, int amountToAdd, string address, string userEmail, string userPassword)
         {
            try
            {
+               if(_storeBL.IsAdmin(userEmail, userPassword)){
                List<StoreFront> listOfStores = _storeBL.SearchStoreByAddress(address);
                int storeID = listOfStores[0].StoreID;
                _storeBL.UpdateInventory(productID, amountToAdd, storeID);
+               }
+               
            }
            catch (System.Exception)
            {

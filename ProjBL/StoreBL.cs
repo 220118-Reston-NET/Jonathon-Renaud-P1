@@ -16,7 +16,6 @@ namespace ProjBL
         public List<Orders> GetOrdersByCustomerEmail(string p_searchCriteria)
         {
             List<Customer> listOfCustomer = _repo.GetAllCustomers();
-            List<StoreFront> listOfStores = _repo.GetStoreFronts();
             
 
             var found = listOfCustomer.Find(p => p.Email == p_searchCriteria);
@@ -127,5 +126,14 @@ namespace ProjBL
         }
 
         
+
+        public bool IsAdmin(string p_email, string p_pass)
+        {
+            Employee emp = new Employee();
+            emp = _repo.GetAllEmployees().Where(emp => emp.Email.Equals(p_email) & emp.Password.Equals(p_pass)).First();
+            return emp.IsAdmin;
+        }
+
+
     }
 }

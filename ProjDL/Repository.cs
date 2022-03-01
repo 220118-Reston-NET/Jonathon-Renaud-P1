@@ -31,6 +31,11 @@ namespace ProjDL
             return JsonSerializer.Deserialize<List<Customer>>(_jsonString);
         }
 
+        public List<Employee> GetAllEmployees()
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Orders> GetAllOrders()
         {
             throw new NotImplementedException();
