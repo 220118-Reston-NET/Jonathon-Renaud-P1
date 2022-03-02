@@ -150,6 +150,11 @@ namespace ProjBL
             
         }
 
+        public Orders AddOrder(Orders p_order)
+        {
+            return _repo.AddOrder(p_order);
+        }
+
 
 
 

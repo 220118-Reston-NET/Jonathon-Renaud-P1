@@ -24,6 +24,11 @@ namespace ProjDL
 
         }
 
+        public Orders AddOrder(Orders p_order)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Customer> GetAllCustomers()
         {
             _jsonString = File.ReadAllText(_filepath + "Customer.json");

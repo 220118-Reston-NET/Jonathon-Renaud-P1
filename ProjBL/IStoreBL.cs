@@ -24,7 +24,9 @@ namespace ProjBL
         List<Products> GetProductsInOrder(int p_orderID);
         bool StoreQuantityIsLessThanOrdered(int p_id, int p_quantity, int p_storeID);
         List<StoreFront> GetAllStores();
-         bool IsAdmin(string p_email, string p_pass);
+        bool IsAdmin(string p_email, string p_pass);
+        public Orders AddOrder(Orders p_order);
+
 
 
 

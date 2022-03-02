@@ -246,7 +246,7 @@ namespace ProjAPI.Controllers
         /// </summary>
         /// <param name="p_customer">takes ina  full customer object</param>
         /// <returns>Returns status that it was added to db</returns>
-        public IActionResult Post([FromBody] Customer p_customer)
+        public IActionResult PostCustomer([FromBody] Customer p_customer)
         {
             try
             {
@@ -256,6 +256,27 @@ namespace ProjAPI.Controllers
             catch (System.Exception)
             {
                 Log.Warning("Was unable to add customer");
+                throw;
+            }
+        }
+
+        // POST: api/Store/customer/order/make   --- adds a new order from a json body
+        [HttpPost("customer/order/make")]
+        /// <summary>
+        /// Adds a new order to the database
+        /// </summary>
+        /// <param name="p_order">takes ina  full order object</param>
+        /// <returns>Returns status that it was added to db</returns>
+        public IActionResult PostOrder([FromBody] Orders p_order)
+        {
+            try
+            {
+                Log.Information("Added an order");
+            return Created("Successfully added", _storeBL.AddOrder(p_order));
+            }
+            catch (System.Exception)
+            {
+                Log.Warning("Was unable to add order");
                 throw;
             }
         }

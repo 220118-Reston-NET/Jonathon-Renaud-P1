@@ -9,3 +9,6 @@
 2022-03-01 22:13:25.316 -06:00 [INF] Checking if user has admin privileges
 2022-03-01 22:13:49.969 -06:00 [INF] Checking if user has admin privileges
 2022-03-01 22:13:50.007 -06:00 [INF] Updating store inventory
+2022-03-02 00:23:42.572 -06:00 [INF] Added an order
+2022-03-02 00:23:43.859 -06:00 [WRN] Was unable to add order
+2022-03-02 00:27:21.362 -06:00 [INF] Added an order

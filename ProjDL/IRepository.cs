@@ -29,6 +29,8 @@ public interface IRepository
     List<Products> GetLineItemDetails(int orderID);
     Boolean StoreQuantityIsLessThanOrdered(int choiceID, int itemOrdered, int storeID);
     public List<Employee> GetAllEmployees();
+    public Orders AddOrder(Orders p_order);
+
 
 
 }

@@ -233,7 +233,7 @@ namespace ProjDL
             return p_lineItems;
 
         }
-                public List<Orders> GetAllOrders()
+        public List<Orders> GetAllOrders()
         {
             List<Orders> listOfOrders = new List<Orders>();
 
@@ -577,6 +577,120 @@ namespace ProjDL
 
             }
             return listOfEmployee;
+        }
+
+        public Orders AddOrder(Orders p_order)
+        {
+            InitializeOrder(p_order);
+
+             string sqlQuery = @"insert into LineItems
+                        values(@ordersID, @productID, @quantity)";
+            
+            double tempTotalPrice = 0;
+
+            using(SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+
+                con.Open();
+
+                foreach (var item in p_order.LineItems)
+                {
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+
+                    
+                command.Parameters.AddWithValue("@ordersID", p_order.OrderID);
+                command.Parameters.AddWithValue("@productID", item.ProdID);
+                command.Parameters.AddWithValue("@quantity", item.Quantity);
+
+                                
+                command.ExecuteNonQuery();
+                
+                tempTotalPrice += (item.Price*item.Quantity);
+                p_order.TotalPrice = tempTotalPrice;
+
+                }
+
+            }
+
+            sqlQuery = @"insert into storeFront_orders
+                        values(@storeID, @ordersID)";
+
+            using(SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+
+                con.Open();
+
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                command.Parameters.AddWithValue("@storeID", p_order.StoreID);
+                command.Parameters.AddWithValue("@ordersID", p_order.OrderID);
+                command.ExecuteNonQuery();
+
+            }
+
+            sqlQuery = @"update Orders 
+                        set ordersTotalPrice = @totalPrice
+                        where ordersID = @ordersID";
+
+            using(SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+
+                con.Open();
+
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                command.Parameters.AddWithValue("@totalPrice", p_order.TotalPrice);
+                command.Parameters.AddWithValue("@ordersID", p_order.OrderID);
+                command.ExecuteNonQuery();
+
+            }
+                int tempQuantity = 0;
+            foreach (var item in p_order.LineItems)
+            {
+                string sqlQuery1 = @"select sfp.quantity from storeFront_product sfp
+                            where sfp.prodID = @prodID
+                            and sfp.storeID = @storeID
+                            ";
+            
+            using(SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+
+                con.Open();
+
+                SqlCommand command = new SqlCommand(sqlQuery1, con);
+                command.Parameters.AddWithValue("@prodID", item.ProdID);
+                command.Parameters.AddWithValue("@storeID", p_order.StoreID);
+
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    tempQuantity = reader.GetInt32(0);
+                }
+
+                tempQuantity = tempQuantity - item.Quantity;
+            
+            }
+            
+            sqlQuery = @"update storeFront_product
+                        set quantity = @quantity
+                        where prodID = @prodID
+                        and storeID = @storeID";
+
+            using(SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+                con.Open();
+
+                SqlCommand command= new SqlCommand(sqlQuery, con);
+                command.Parameters.AddWithValue("@quantity", tempQuantity);
+                command.Parameters.AddWithValue("@prodID", item.ProdID);
+                command.Parameters.AddWithValue("@storeID", p_order.StoreID);
+
+                command.ExecuteNonQuery();
+            }
+                
+            }
+
+           
+
+            return p_order;
         }
     }
 
