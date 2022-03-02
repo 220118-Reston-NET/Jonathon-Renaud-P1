@@ -30,7 +30,6 @@ public class EmployeeModelTest
             emp.IsAdmin = validStatus;
 
             //Assert
-            Assert.NotNull(emp.IsAdmin); //checks that the property is not null meaning we did set data in this property
             Assert.Equal(validStatus, emp.IsAdmin); //checks if the property does indeed hold the same value as what we set it as
         }
 

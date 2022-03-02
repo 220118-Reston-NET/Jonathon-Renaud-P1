@@ -122,9 +122,35 @@ namespace ProjTest
 
         [Fact]
 
-        public void ShouldGetProductsInOrder()
+        public void ShouldReturnIfEmployeeIsAdmin()
         {
             
+
+            string testEmail = "Jon@jon.com";
+            string testPassword = "password";
+            bool testStatus = true;
+
+           Employee emp = new Employee()
+            {
+                Email = testEmail,
+                Password = testPassword,
+                IsAdmin = testStatus
+            };
+
+            
+
+            List<Employee> expectedListOfEmployees = new List<Employee>();
+            expectedListOfEmployees.Add(emp);
+
+            Mock<IRepository> mockRepo = new Mock<IRepository>();
+
+            mockRepo.Setup(repo => repo.GetAllEmployees()).Returns(expectedListOfEmployees);            
+
+            IStoreBL StoreBL = new StoreBL(mockRepo.Object);
+
+            bool actual = StoreBL.IsAdmin("Jon@jon.com", "password");
+
+            Assert.Equal(emp.IsAdmin, actual);
         }
 
         

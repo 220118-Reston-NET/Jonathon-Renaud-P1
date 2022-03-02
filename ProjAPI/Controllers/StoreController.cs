@@ -130,10 +130,27 @@ namespace ProjAPI.Controllers
 
         //GET: api/Store/address/inventory  --- view all inventory at a location
         [HttpGet("address/inventory")]
-        public IActionResult GetInventoryAtAStore([FromQuery] string address)
+        public IActionResult GetInventoryAtAStore([FromQuery] string address, string userEmail, string userPassword)
         {
+            if(_storeBL.IsAdmin(userEmail, userPassword)){
+                try
+            {
+                
             return Ok(_storeBL.GetProductsByStore(address));
+            }
+            catch (System.Exception)
+            {
+                throw;
+            }
+            }
+                else
+                {return StatusCode(401);}
         }
+            
+            
+            
+            
+        
 
 
 
@@ -147,22 +164,29 @@ namespace ProjAPI.Controllers
 
         // PUT: api/Store/address/updateinv
         [HttpPut("address/updateinv")]
-        public void UpdateInventoryAtAStore([FromQuery] int productID, int amountToAdd, string address, string userEmail, string userPassword)
+        public IActionResult UpdateInventoryAtAStore([FromQuery] int productID, int amountToAdd, string address, string userEmail, string userPassword)
         {
+           if(_storeBL.IsAdmin(userEmail, userPassword)){
            try
            {
-               if(_storeBL.IsAdmin(userEmail, userPassword)){
+               
                List<StoreFront> listOfStores = _storeBL.SearchStoreByAddress(address);
                int storeID = listOfStores[0].StoreID;
                _storeBL.UpdateInventory(productID, amountToAdd, storeID);
-               }
+               return StatusCode(200);
+               
+               
                
            }
            catch (System.Exception)
            {
                
-               throw;
+               return BadRequest();
+            }
            }
+        else {
+                   return StatusCode(401);
+               }
            
         }
 

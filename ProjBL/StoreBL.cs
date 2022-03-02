@@ -129,9 +129,19 @@ namespace ProjBL
 
         public bool IsAdmin(string p_email, string p_pass)
         {
-            Employee emp = new Employee();
-            emp = _repo.GetAllEmployees().Where(emp => emp.Email.Equals(p_email) & emp.Password.Equals(p_pass)).First();
-            return emp.IsAdmin;
+            try
+            {
+                Employee emp = new Employee();
+                emp = _repo.GetAllEmployees().Where(emp => emp.Email.Equals(p_email) & emp.Password.Equals(p_pass)).FirstOrDefault();
+                return emp.IsAdmin;
+            }
+            catch (System.Exception)
+            {
+                
+                throw;
+            }
+
+            
         }
 
 
