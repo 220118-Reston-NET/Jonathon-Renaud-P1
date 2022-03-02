@@ -43,7 +43,6 @@ namespace ProjBL
 
         public List<Orders> GetOrdersByStoreAddress(string p_searchCriteria)
         {
-            List<Customer> listOfCustomer = _repo.GetAllCustomers();
             List<StoreFront> listOfStores = _repo.GetStoreFronts();
             
 
@@ -152,7 +151,7 @@ namespace ProjBL
         }
 
 
-        
+
 
     }
 }

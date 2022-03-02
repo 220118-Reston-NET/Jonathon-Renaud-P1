@@ -25,8 +25,12 @@ namespace ProjAPI.Controllers
 
         }
 
+        
         // GET: api/Store/customer/getall ---retrieves all customers in db but not their orders
         [HttpGet("customer/getall")]
+        /// <summary>
+        /// Will send back a response of all customers currently in the database
+        /// </summary>
         public IActionResult GetAllCustomers()
         {
             try
@@ -44,6 +48,11 @@ namespace ProjAPI.Controllers
 
         // GET: api/Store/customer/email  ?email=   ---search by email
         [HttpGet("customer/email")]
+        /// <summary>
+        /// searches database for a customer by their email
+        /// </summary>
+        /// <param name="email">takes in a user email</param>
+        /// <returns>Returns a customer by their email</returns>
         public IActionResult GetCustomerByEmail([FromQuery] string email)
         {
             try
@@ -60,6 +69,11 @@ namespace ProjAPI.Controllers
 
         //GET: api/Store/customer/email/orders  --- get all orders associated with a customer
         [HttpGet("customer/email/orders")]
+        /// <summary>
+        /// Searches for all orders belonging to a specific customer
+        /// </summary>
+        /// <param name="email">Takes in a user email to search by. Must match exactly.</param>
+        /// <returns>Returns orders by a specific customer</returns>
         public IActionResult GetCustomerOrders([FromQuery] string email)
         {
             try
@@ -76,6 +90,12 @@ namespace ProjAPI.Controllers
 
          //GET: api/Store/customer/email/orders/{sortby}  --- get all orders associated with a customer and sort by some parameter
         [HttpGet("customer/email/orders/{sortby}")]
+        /// <summary>
+        /// Searches for and sorts orders by a specific customer and a sortby parameter
+        /// </summary>
+        /// <param name="email">Takes in a user email. Must be specific, case-sensitive</param>
+        /// <param name="sortby">One of 4 keywords to sortby - new/old/highprice/lowprice and sorts accordingly</param>
+        /// <returns>Orders sorted either by order id which increment so are by time created or by totalprice</returns>
         public IActionResult GetCustomerOrdersAndSort([FromQuery] string email, string sortby)
         {
             try
@@ -115,6 +135,12 @@ namespace ProjAPI.Controllers
 
         //GET: api/Store/address/orders/{sortby}  --- get all orders associated with a store and sort it by some criteria
         [HttpGet("address/orders/{sortby}")]
+        /// <summary>
+        /// Searches for and sorts orders by a specific address(store location) and a sortby parameter
+        /// </summary>
+        /// <param name="address">Takes in a store location address. Must be specific, case-sensitive</param>
+        /// <param name="sortby">One of 4 keywords to sortby - new/old/highprice/lowprice and sorts accordingly</param>
+        /// <returns>Orders sorted either by order id which increment so are by time created or by totalprice</returns>
         public IActionResult GetStoreOrders([FromQuery] string address, string sortby)
         {
             try
@@ -153,6 +179,11 @@ namespace ProjAPI.Controllers
 
         //GET: api/Store/customer/orderdetail  --- get order details by order id
         [HttpGet("customer/email/orderdetail")]
+        /// <summary>
+        /// Provides order details given a specific order id
+        /// </summary>
+        /// <param name="orderID">the order id belonging to a specific past order</param>
+        /// <returns>order details about an order</returns>
         public IActionResult GetCustomerOrderDetails([FromQuery] int orderID)
         {
             try
@@ -171,6 +202,13 @@ namespace ProjAPI.Controllers
 
         //GET: api/Store/address/inventory  --- view all inventory at a location
         [HttpGet("address/inventory")]
+        /// <summary>
+        /// Shows a view of all inventory at a specific location
+        /// </summary>
+        /// <param name="address">Takes in a store location address. Must be specific, case-sensitive</param>
+        /// <param name="userEmail">Takes in a case-sensitive email. Used to validate if user is authorized to perform this transaction</param>
+        /// <param name="userPassword">Takes in a case-sensitive password. Used to validate if user is authorized to perform this transaction</param>
+        /// <returns></returns>
         public IActionResult GetInventoryAtAStore([FromQuery] string address, string userEmail, string userPassword)
         {
             Log.Information("Checking if user has admin privileges");
@@ -203,6 +241,11 @@ namespace ProjAPI.Controllers
         
         // POST: api/Store/customer/add   --- adds a new customer from a json body
         [HttpPost("customer/add")]
+        /// <summary>
+        /// Adds a new customer to the database
+        /// </summary>
+        /// <param name="p_customer">takes ina  full customer object</param>
+        /// <returns>Returns status that it was added to db</returns>
         public IActionResult Post([FromBody] Customer p_customer)
         {
             try
@@ -221,6 +264,15 @@ namespace ProjAPI.Controllers
 
         // PUT: api/Store/address/updateinv
         [HttpPut("address/updateinv")]
+        /// <summary>
+        /// Will update a stores inventory after validating that a user has the admin level of authorization.
+        /// </summary>
+        /// <param name="productID">Takes in an integer value. This is the product ID</param>
+        /// <param name="amountToAdd">Takes in an integer value. This is the amount you wish to add to a product inventory</param>
+        /// <param name="address">Takes in a store location address. Must be specific, case-sensitive</param>
+        /// <param name="userEmail">Takes in a case-sensitive email. Used to validate if user is authorized to perform this transaction</param>
+        /// <param name="userPassword">Takes in a case-sensitive password. Used to validate if user is authorized to perform this transaction</param>
+        /// <returns></returns>
         public IActionResult UpdateInventoryAtAStore([FromQuery] int productID, int amountToAdd, string address, string userEmail, string userPassword)
         {
             Log.Information("Checking if user has admin privileges");
@@ -232,10 +284,7 @@ namespace ProjAPI.Controllers
                int storeID = listOfStores[0].StoreID;
                _storeBL.UpdateInventory(productID, amountToAdd, storeID);
                return StatusCode(200);
-               
-               
-               
-           }
+            }
            catch (System.Exception)
            {
                Log.Warning("Was unable to update inventory");

@@ -223,7 +223,8 @@ namespace ProjDL
             }
             catch (System.Exception)
             {
-                
+                //Something went wrong and was unable to make order
+             throw;   
                
             }
             

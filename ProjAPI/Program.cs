@@ -9,10 +9,7 @@ Log.Logger = new LoggerConfiguration()
     .WriteTo.File("./logs/user.txt")
     .CreateLogger();
 
-var configuration = new ConfigurationBuilder()
-    .SetBasePath(Directory.GetCurrentDirectory())
-    .AddJsonFile("appsettings.json")
-    .Build();
+
 
 // Add services to the container.
 
