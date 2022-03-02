@@ -12,3 +12,29 @@
 2022-03-02 00:23:42.572 -06:00 [INF] Added an order
 2022-03-02 00:23:43.859 -06:00 [WRN] Was unable to add order
 2022-03-02 00:27:21.362 -06:00 [INF] Added an order
+2022-03-02 00:30:20.503 -06:00 [INF] Getting order details by an order id
+2022-03-02 00:30:49.483 -06:00 [INF] Searching for customer by email
+2022-03-02 00:31:14.240 -06:00 [INF] Using customer email to search for orders
+2022-03-02 00:31:14.276 -06:00 [WRN] Was not able to retreive orders by customer email.
+2022-03-02 00:31:21.671 -06:00 [INF] Using customer email to search for orders
+2022-03-02 00:43:04.751 -06:00 [INF] Received all customers as a response.
+2022-03-02 00:48:43.602 -06:00 [INF] Retrieving orders by store most expensive to least
+2022-03-02 09:06:51.886 -06:00 [INF] Received all customers as a response.
+2022-03-02 09:07:09.705 -06:00 [INF] Searching for customer by email
+2022-03-02 09:07:28.950 -06:00 [INF] Using customer email to search for orders
+2022-03-02 09:08:08.387 -06:00 [WRN] Wrong keyword was used
+2022-03-02 09:08:42.110 -06:00 [INF] Retrieving orders by customer most expensive to least
+2022-03-02 09:09:03.248 -06:00 [INF] Retrieving orders by customer least expensive to most
+2022-03-02 09:09:13.974 -06:00 [INF] Retrieving orders by customer newest to oldest
+2022-03-02 09:09:30.063 -06:00 [INF] Retrieving orders by customer oldest to newest
+2022-03-02 09:09:46.120 -06:00 [INF] Retrieving orders by store most expensive to least
+2022-03-02 09:10:29.086 -06:00 [INF] Getting order details by an order id
+2022-03-02 09:11:03.083 -06:00 [INF] Checking if user has admin privileges
+2022-03-02 09:11:03.135 -06:00 [INF] Viewing inventory at a store
+2022-03-02 09:12:03.666 -06:00 [INF] Added a customer
+2022-03-02 09:12:43.528 -06:00 [INF] Added an order
+2022-03-02 09:13:04.189 -06:00 [INF] Getting order details by an order id
+2022-03-02 09:14:03.379 -06:00 [INF] Checking if user has admin privileges
+2022-03-02 09:14:03.424 -06:00 [INF] Updating store inventory
+2022-03-02 09:14:15.428 -06:00 [INF] Checking if user has admin privileges
+2022-03-02 09:14:15.479 -06:00 [INF] Viewing inventory at a store
