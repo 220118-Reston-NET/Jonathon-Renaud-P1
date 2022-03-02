@@ -113,7 +113,6 @@ namespace ProjDL
 
                 SqlCommand command = new SqlCommand(sqlQuery, con);
                 command.Parameters.AddWithValue("@custID", p_order.CustomerID);
-                // command.Parameters.AddWithValue("@storeID", p_order.StoreID);
                 command.Parameters.AddWithValue("@orderTotalCost", p_order.TotalPrice);
 
                 command.ExecuteNonQuery();
@@ -155,7 +154,6 @@ namespace ProjDL
             List<StoreFront> listOfStores = new List<StoreFront>();
 
             int temporaryQuantity = 0;
-            // int p_storeID = listOfStores[0].StoreID;
 
             using(SqlConnection con = new SqlConnection(_connectionStrings))
             {

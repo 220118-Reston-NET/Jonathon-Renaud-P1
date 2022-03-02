@@ -24,16 +24,7 @@ namespace ProjModel
             get { return _storeID; }
             set { _storeID = value; }
         }
-        
-
-        // private List<LineItems> _LineItems;
-
-        // public List<LineItems> LineItems 
-        // {
-        //     get { return _LineItems; }
-        //     set { _LineItems = value; }
-        // }
-
+              
         private List<Products> _LineItems;
         public List<Products> LineItems
         {
@@ -55,10 +46,7 @@ namespace ProjModel
             set { _totalPrice = value; }
         }
 
-        public override string ToString()
-        {
-            return $"=====================\nOrder ID: {OrderID}\nCustomer ID: {CustomerID}\nStore ID: {StoreID}\nTotal Spent: ${_totalPrice.ToString("0.00")}\n=====================\n";
-        }
+      
         
         
     }

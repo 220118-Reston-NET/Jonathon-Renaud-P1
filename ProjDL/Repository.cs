@@ -6,7 +6,7 @@ namespace ProjDL
     public class Repository : IRepository
     {
 
-        private string _filepath = "../ProjDL/Database/";
+        private readonly string _filepath = "../ProjDL/Database/";
         private string _jsonString;
 
         public Customer AddCustomer(Customer p_customer)

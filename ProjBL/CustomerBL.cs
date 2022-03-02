@@ -6,7 +6,7 @@ namespace ProjBL
     
     public class CustomerBL : ICustomerBL
     {
-        private IRepository _repo;
+        private readonly IRepository _repo;
         /// <summary>
         /// Constructor - Dependency Injection
         /// </summary>

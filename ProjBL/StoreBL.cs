@@ -6,7 +6,7 @@ namespace ProjBL
 {
     public class StoreBL : IStoreBL
     {
-    private IRepository _repo;
+    private readonly IRepository _repo;
 
     public StoreBL(IRepository p_repo)
     {
@@ -129,11 +129,18 @@ namespace ProjBL
 
         public bool IsAdmin(string p_email, string p_pass)
         {
+            
             try
             {
                 Employee emp = new Employee();
-                emp = _repo.GetAllEmployees().Where(emp => emp.Email.Equals(p_email) & emp.Password.Equals(p_pass)).FirstOrDefault();
+                emp = _repo.GetAllEmployees().Where(emp => emp.Email.Equals(p_email) && emp.Password.Equals(p_pass)).FirstOrDefault();
+                if(emp != null){
                 return emp.IsAdmin;
+                }
+                else{
+                
+                    throw new Exception("USER IS NOT AUTHORIZED!! Email and password combination were incorrect.");
+                }
             }
             catch (System.Exception)
             {
@@ -144,6 +151,8 @@ namespace ProjBL
             
         }
 
+
+        
 
     }
 }

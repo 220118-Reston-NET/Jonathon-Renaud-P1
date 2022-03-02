@@ -31,21 +31,10 @@
             set { _phoneNumber = value; }
         }
         
-        public Customer()
-        {
-            Name = "";
-            Address = "";
-            Email = "";
-            PhoneNumber = "";
-            
-
-        }
         
         
-        public override string ToString()
-        {
-            return $"Name: {Name}\nAddress: {Address}\nEmail: {Email}\nPhone Number: {PhoneNumber}";
-        }
+        
+       
 
         
 

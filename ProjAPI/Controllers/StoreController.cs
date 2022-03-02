@@ -29,21 +29,49 @@ namespace ProjAPI.Controllers
         [HttpGet("customer/getall")]
         public IActionResult GetAllCustomers()
         {
-            return Ok(_customerBL.GetAllCustomers());
+            try
+            {
+                Log.Information("Received all customers as a response.");
+                return Ok(_customerBL.GetAllCustomers());
+            }
+            catch (System.Exception)
+            {
+                Log.Warning("Could not fetch customers");
+                throw;
+            }
+            
         }
 
         // GET: api/Store/customer/email  ?email=   ---search by email
         [HttpGet("customer/email")]
         public IActionResult GetCustomerByEmail([FromQuery] string email)
         {
+            try
+            {
+                Log.Information("Searching for customer by email");
             return Ok(_customerBL.SearchCustomerByEmail(email));
+            }
+            catch (System.Exception)
+            {
+                Log.Warning("Was not able to search for customer by email");
+                throw;
+            }
         }
 
         //GET: api/Store/customer/email/orders  --- get all orders associated with a customer
         [HttpGet("customer/email/orders")]
         public IActionResult GetCustomerOrders([FromQuery] string email)
         {
+            try
+            {
+                Log.Information("Using customer email to search for orders");
             return Ok(_storeBL.GetOrdersByCustomerEmail(email));
+            }
+            catch (System.Exception)
+            {
+                Log.Warning("Was not able to retreive orders by customer email.");
+                throw;
+            }
         }
 
          //GET: api/Store/customer/email/orders/{sortby}  --- get all orders associated with a customer and sort by some parameter
@@ -54,27 +82,32 @@ namespace ProjAPI.Controllers
             {
                  if (sortby == "new")
             {
+                Log.Information("Retrieving orders by customer newest to oldest");
             return Ok(_storeBL.GetOrdersByCustomerEmail(email).OrderByDescending(p => p.OrderID));
             }
             else if (sortby == "old")
             {
+                Log.Information("Retrieving orders by customer oldest to newest");
             return Ok(_storeBL.GetOrdersByCustomerEmail(email).OrderBy(p => p.OrderID));
-            }
+            }            
             else if (sortby == "highprice")
             {
+                Log.Information("Retrieving orders by customer most expensive to least");
             return Ok(_storeBL.GetOrdersByCustomerEmail(email).OrderByDescending(p => p.TotalPrice));
             }
             else if (sortby == "lowprice")
             {
+                Log.Information("Retrieving orders by customer least expensive to most");
             return Ok(_storeBL.GetOrdersByCustomerEmail(email).OrderBy(p => p.TotalPrice));
             }
             else {
+                Log.Warning("Wrong keyword was used");
                 return NotFound("Please input keywords: 'new' | 'old' | 'highprice' | 'lowprice'");
             }
             }
             catch (System.Exception)
             {
-                
+                Log.Warning("Was not able to receive orders.");
                 throw;
             }
            
@@ -88,27 +121,32 @@ namespace ProjAPI.Controllers
             {
                  if (sortby == "new")
             {
+                Log.Information("Retrieving orders by store newest to oldest");
             return Ok(_storeBL.GetOrdersByStoreAddress(address).OrderByDescending(p => p.OrderID));
             }
             else if (sortby == "old")
             {
+                Log.Information("Retrieving orders by store oldest to newest");
             return Ok(_storeBL.GetOrdersByStoreAddress(address).OrderBy(p => p.OrderID));
             }
             else if (sortby == "highprice")
             {
+                Log.Information("Retrieving orders by store most expensive to least");
             return Ok(_storeBL.GetOrdersByStoreAddress(address).OrderByDescending(p => p.TotalPrice));
             }
             else if (sortby == "lowprice")
             {
+                Log.Information("Retrieving orders by store least expensive to most");
             return Ok(_storeBL.GetOrdersByStoreAddress(address).OrderBy(p => p.TotalPrice));
             }
             else {
+                Log.Warning("Wrong keyword was used");
                 return NotFound("Please input keywords: 'new' | 'old' | 'highprice' | 'lowprice'");
             }
             }
             catch (System.Exception)
             {
-                
+                Log.Warning("Was not able to receive orders.");
                 throw;
             }
         }
@@ -117,34 +155,42 @@ namespace ProjAPI.Controllers
         [HttpGet("customer/email/orderdetail")]
         public IActionResult GetCustomerOrderDetails([FromQuery] int orderID)
         {
+            try
+            {
+            Log.Information("Getting order details by an order id");
             return Ok(_storeBL.GetProductsInOrder(orderID));
+            }
+            catch
+            {
+                Log.Warning("Was not able to receive order details by id");
+                throw;
+            }
         }
 
-        //GET: api/Store/customer/orderdetail  --- get order details for a customer or 
-        // [HttpPost("customer/createorder")]
-        // public IActionResult CreateOrder(Orders p_order)
-        // {
-        //     _storeBL.InitializeOrder(p_order);            
-        //     return Ok(_storeBL.MakeOrder(LineItems p_lineItems, int quantity, int p_storeID));
-        // }
+       
 
         //GET: api/Store/address/inventory  --- view all inventory at a location
         [HttpGet("address/inventory")]
         public IActionResult GetInventoryAtAStore([FromQuery] string address, string userEmail, string userPassword)
         {
+            Log.Information("Checking if user has admin privileges");
             if(_storeBL.IsAdmin(userEmail, userPassword)){
                 try
             {
-                
+            Log.Information("Viewing inventory at a store");
             return Ok(_storeBL.GetProductsByStore(address));
             }
             catch (System.Exception)
             {
+                    Log.Warning("Unable to view inventory at a store");
                 throw;
             }
             }
                 else
-                {return StatusCode(401);}
+                {
+                    Log.Warning("User is receiving status code 401 and is unauthorized for this");
+                    return StatusCode(401);
+                    }
         }
             
             
@@ -159,17 +205,29 @@ namespace ProjAPI.Controllers
         [HttpPost("customer/add")]
         public IActionResult Post([FromBody] Customer p_customer)
         {
+            try
+            {
+                Log.Information("Added a customer");
             return Created("Successfully added", _customerBL.AddCustomer(p_customer));
+            }
+            catch (System.Exception)
+            {
+                Log.Warning("Was unable to add customer");
+                throw;
+            }
         }
+
+        
 
         // PUT: api/Store/address/updateinv
         [HttpPut("address/updateinv")]
         public IActionResult UpdateInventoryAtAStore([FromQuery] int productID, int amountToAdd, string address, string userEmail, string userPassword)
         {
+            Log.Information("Checking if user has admin privileges");
            if(_storeBL.IsAdmin(userEmail, userPassword)){
            try
            {
-               
+               Log.Information("Updating store inventory");
                List<StoreFront> listOfStores = _storeBL.SearchStoreByAddress(address);
                int storeID = listOfStores[0].StoreID;
                _storeBL.UpdateInventory(productID, amountToAdd, storeID);
@@ -180,11 +238,12 @@ namespace ProjAPI.Controllers
            }
            catch (System.Exception)
            {
-               
+               Log.Warning("Was unable to update inventory");
                return BadRequest();
             }
            }
         else {
+                    Log.Warning("User is receiving status code 401 and is unauthorized to do this");
                    return StatusCode(401);
                }
            

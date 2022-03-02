@@ -23,10 +23,6 @@ namespace ProjModel
         
         public string Description { get; set; }
 
-        public override string ToString()
-        {   
-            return $"========================\nID: {ProdID}\nName: {Name}\nPrice: ${Price.ToString("0.00")}\nDescription: {Description}\nQuantity: {Quantity}";    
-        }
-        // possibly add Categories later. 
+        
     }
 }

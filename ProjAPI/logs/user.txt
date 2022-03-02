@@ -1,0 +1,11 @@
+2022-03-01 21:09:54.547 -06:00 [INF] Received all customers as a response.
+2022-03-01 22:10:24.464 -06:00 [INF] Received all customers as a response.
+2022-03-01 22:10:37.364 -06:00 [INF] Searching for customer by email
+2022-03-01 22:10:47.877 -06:00 [INF] Using customer email to search for orders
+2022-03-01 22:11:03.367 -06:00 [WRN] Wrong keyword was used
+2022-03-01 22:11:11.431 -06:00 [INF] Retrieving orders by customer most expensive to least
+2022-03-01 22:11:22.786 -06:00 [INF] Retrieving orders by customer least expensive to most
+2022-03-01 22:11:54.445 -06:00 [INF] Retrieving orders by store newest to oldest
+2022-03-01 22:13:25.316 -06:00 [INF] Checking if user has admin privileges
+2022-03-01 22:13:49.969 -06:00 [INF] Checking if user has admin privileges
+2022-03-01 22:13:50.007 -06:00 [INF] Updating store inventory
