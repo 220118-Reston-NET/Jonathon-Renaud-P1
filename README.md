@@ -96,5 +96,8 @@ To contact me or report issues, please email me at jonathon.renaud@revature.net
    
 
 ## Links
-
+[Azure Deployment "customer/getall" Test](https://projdemo.azurewebsites.net/api/Store/customer/getall)  
 [LinkedIn](https://www.linkedin.com/in/jonathon-renaud-410910aa/)
+
+Base Azure Deployed App Link:  
+```https://projdemo.azurewebsites.net/{api calls go here}```
